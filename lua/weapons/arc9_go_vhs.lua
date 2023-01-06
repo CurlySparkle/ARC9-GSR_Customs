@@ -371,19 +371,12 @@ SWEP.Animations = {
     },
     ["inspect"] = {
         Source = "lookat01",
-        EventTable = {
-            { s = "weapons/csgo/movement1.wav", t = 2 / 50 },
-            { s = "weapons/csgo/movement2.wav", t = 92 / 50 },
-            { s = "weapons/csgo/movement3.wav", t = 116 / 50 },
-        },
-    },
-    ["bash"] = {
-        Source = {"melee", "melee2", "melee3"},
+		Mult = 0.6,
         IKTimeLine = {
             {
                 t = 0,
                 lhik = 1,
-                rhik = 1
+                rhik = 0
             },
             {
                 t = 0.2,
@@ -396,11 +389,19 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.75,
+                t = 0.9,
                 lhik = 1,
                 rhik = 1
             },
         },
+        EventTable = {
+            { s = "weapons/csgo/movement1.wav", t = 2 / 50 },
+            { s = "weapons/csgo/movement2.wav", t = 140 / 50 },
+            { s = "weapons/csgo/movement3.wav", t = 230 / 50 },
+        },
+    },
+    ["bash"] = {
+        Source = {"melee", "melee2", "melee3"},
     },
 }
 
@@ -419,36 +420,9 @@ SWEP.AttachmentTableOverrides = {
 }
 
 SWEP.AttachmentElements = {
-    ["mag_increased"] = {
-        Bodygroups = {
-            {1,2},
-        },
-    },
-    ["mag_decreased"] = {
+    ["sight"] = {
         Bodygroups = {
             {1,1},
-        },
-    },
-    ["barrel_long"] = {
-        Bodygroups = {
-            {2,1},
-        },
-    AttPosMods = { [2] = { Pos = Vector(0, -2.85, 18), } }	
-    },
-    ["barrel_short"] = {
-        Bodygroups = {
-            {2,2},
-        },
-    AttPosMods = { [2] = { Pos = Vector(0, -2.85, 14.1), } }	
-    },
-    ["bipod_deployed"] = {
-        Bodygroups = {
-            {3,1},
-        },
-    },
-    ["sight_mount"] = {
-        Bodygroups = {
-            {4,1},
         },
     },
 }
@@ -467,29 +441,31 @@ SWEP.Attachments = {
         Bone = "v_weapon.famas_Parent",
         Pos = Vector(0, -2.85, 17.3),
         Ang = Angle(90, 0, -90),
+		Scale = 1.1,
     },
     {
         PrintName = "Optics",
         Bone = "v_weapon.famas_Parent",
-        Pos = Vector(0, -5.9, 2),
+        Pos = Vector(0, -5.9, -2),
         Ang = Angle(90, 0, -90),
         Category = {"csgo_optic"},
         CorrectiveAng = Angle(-0.15, 0.2, 0),
+		InstalledElements = {"sight"},
     },
     {
-        PrintName = "Side",
+        PrintName = "Tactical",
         DefaultAttName = "Default",
-        Category = "csgo_rail_tac",
+        Category = "csgo_tac",
         Bone = "v_weapon.famas_Parent",
-        Pos = Vector(-1, -6.4, 10),
-        Ang = Angle(90, 0, 90),
+        Pos = Vector(-1, -2.9, 8),
+        Ang = Angle(90, 180, 0),
     },
     {
         PrintName = "Bottom",
         DefaultAttName = "Default",
         Category = "csgo_rail_ub",
         Bone = "v_weapon.famas_Parent",
-        Pos = Vector(0, -1.5, 9),
+        Pos = Vector(0, -1.3, 7.5),
         Ang = Angle(90, 0, 90),
 		Scale = 1,
     },
