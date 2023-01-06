@@ -82,12 +82,18 @@ SWEP.Crosshair = true
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 150
+SWEP.RPM = 300
 
 SWEP.Firemodes = {
     {
         Mode = 1,
-        PrintName = "SEMI"
+        PrintName = "SINGLE"
+    },
+    {
+        Mode = 1,
+        PrintName = "DOUBLE",
+		AmmoPerShot = 2,
+		Num = 14
     },
 }
 
@@ -247,6 +253,7 @@ SWEP.NoShellEject = true
 -------------------------- SOUNDS
 
 local path = "weapons/csgo/mag7/"
+local path2 = "weapons/csgo/tec9/"
 
 SWEP.ShootSound = "CSGO.mag7.Fire"
 SWEP.ShootSoundSilenced = "CSGO.mag7.Silenced_Fire"
@@ -255,11 +262,62 @@ SWEP.DryFireSound = "weapons/clipempty_rifle.wav"
 
 SWEP.FiremodeSound = "weapons/csgo/auto_semiauto_switch.wav"
 
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local rng = math.Truncate(util.SharedRandom("ik hou van jij", 1,100))
+ 
+	if rng >= 50 then
+		if anim == "inspect" then		
+			return "inspect_2" 
+		end	
+		if anim == "reload" then		
+			return "reload_2" 
+		end
+    end
+	if rng >= 70 then
+		if anim == "reload_empty" then		
+			return "reload_empty_2" 
+		end
+	end
+end
+
 SWEP.Animations = {
     ["fire"] = {
         Source = {"shoot1"},
     },
     ["reload"] = {
+        Source = "reload_short1",
+		RareSource = "reload_short2",
+		RareSourceChance = 0.7,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 1
+            },
+        },
+        EventTable = {
+            {s = path .. "mag7_clipout.wav", t = 6 / 30},
+			{s = path2 .. "tec9_boltpull.wav", t = 8 / 30},
+			{s = path2 .. "tec9_boltrelease.wav", t = 19 / 30},
+            {s = path .. "mag7_clipin.wav", t = 26 / 30},
+        },
+    },
+    ["reload_empty"] = {
         Source = "reload",
         IKTimeLine = {
             {
@@ -284,8 +342,41 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "mag7_clipout.wav", t = 7 / 30},
+            {s = path .. "mag7_clipout.wav", t = 6 / 30},
+			{s = path2 .. "tec9_boltpull.wav", t = 8 / 30},
+			{s = path2 .. "tec9_boltrelease.wav", t = 19 / 30},
             {s = path .. "mag7_clipin.wav", t = 26 / 30},
+        },
+    },
+    ["reload_empty_2"] = {
+        Source = "reload2",
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 1
+            },
+        },
+        EventTable = {
+            {s = path .. "mag7_clipout.wav", t = 6 / 30},
+			{s = path2 .. "tec9_boltpull.wav", t = 8 / 30},
+			{s = path2 .. "tec9_boltrelease.wav", t = 25 / 30},
+            {s = path .. "mag7_clipin.wav", t = 35 / 30},
         },
     },
     ["ready"] = {
@@ -357,6 +448,13 @@ SWEP.Animations = {
             { s = "weapons/csgo/movement1.wav", t = 2 / 30 },
             { s = "weapons/csgo/movement2.wav", t = 52 / 30 },
             { s = "weapons/csgo/movement3.wav", t = 79 / 30 },
+        },
+    },
+    ["inspect_2"] = {
+        Source = "lookat02",
+        EventTable = {
+            {s = path .. "mag7_clipout.wav", t = 6 / 30},
+            {s = path .. "mag7_clipin.wav", t = 26 / 30},
         },
     },
     ["bash"] = {
