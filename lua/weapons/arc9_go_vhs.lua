@@ -279,8 +279,8 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = "weapons/csgo/vhs/vhs_magout.wav", t = 10 / 50},
-            {s = "weapons/csgo/vhs/vhs_magin.wav", t = 59 / 50},
-            {s = "weapons/csgo/vhs/vhs_hit.wav", t = 61 / 50},
+            {s = "weapons/csgo/vhs/vhs_magin.wav", t = 57 / 50},
+            --{s = "weapons/csgo/vhs/vhs_hit.wav", t = 61 / 50},
         },
     },
     ["reload_empty"] = {
@@ -309,8 +309,8 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = "weapons/csgo/vhs/vhs_magout.wav", t = 10 / 45},
-            {s = "weapons/csgo/vhs/vhs_magin.wav", t = 59 / 45},
-            {s = "weapons/csgo/vhs/vhs_hit.wav", t = 61 / 45},
+            {s = "weapons/csgo/vhs/vhs_magin.wav", t = 57 / 45},
+            --{s = "weapons/csgo/vhs/vhs_hit.wav", t = 61 / 45},
 			{s = "weapons/csgo/vhs/vhs_boltback.wav", t = 121 / 45},
 			{s = "weapons/csgo/vhs/vhs_boltrelease.wav", t = 135 / 45},
 			{s = "weapons/csgo/movement1.wav", t = 145 / 45},
@@ -425,15 +425,33 @@ SWEP.AttachmentElements = {
             {1,1},
         },
     },
+    ["mag"] = {
+        Bodygroups = {
+            {2,1},
+        },
+    },
+    ["barrel_short"] = {
+        Bodygroups = {
+            {3,1},
+			{4,1},
+        },
+	AttPosMods = { [2] = { Pos = Vector(0, -2.85, 11.5), } }	
+    },
 }
 
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local model = data.model
+    if wep:HasElement("barrel_short") and wep.Attachments[2].Installed then model:SetBodygroup(4,2) end
+    --if wep.Attachments[1].Installed then model:SetBodygroup(2,4) end
+end
+
 SWEP.Attachments = {
-    -- {
-        -- PrintName = "Barrel",
-		-- DefaultAttName = "Standard",
-		-- --Bone = "v_weapon.gloqck_magazine",
-        -- Category = "go_famas_barrel"
-    -- },
+    {
+        PrintName = "Barrel",
+		DefaultAttName = "Standard",
+		--Bone = "v_weapon.gloqck_magazine",
+        Category = "go_vhs_barrel"
+    },
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
@@ -469,11 +487,11 @@ SWEP.Attachments = {
         Ang = Angle(90, 0, 90),
 		Scale = 1,
     },
-    -- {
-        -- PrintName = "Mag",
-		-- Bone = "v_weapon.famas_magazine",
-        -- Category = {"go_mag_famas"},
-    -- },
+    {
+        PrintName = "Mag",
+		Bone = "v_weapon.famas_magazine",
+        Category = {"go_mag"},
+    },
     {
         PrintName = "Ammo",
         Bone = "v_weapon.famas_magazine",
@@ -516,6 +534,11 @@ SWEP.Attachments = {
         Bone = "v_weapon.famas_Parent", -- relevant bone any attachments will be mostly referring to
         Pos = Vector(0.7, -5, -2), -- offset that the attachment will be relative to the bone
         Ang = Angle(90, 0, -90),
+    },
+    {
+        PrintName = "Cosmetic",
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
     },
 }
 

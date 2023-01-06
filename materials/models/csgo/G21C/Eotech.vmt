@@ -1,6 +1,6 @@
 VertexLitGeneric
 {
-	"$baseTexture" "models\csgo\G21C\Body"
+	"$baseTexture" "models\csgo\G21C\g21_d"
 	"$additive" "1"
 	"$selfillum" "1"
 }
