@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	"$baseTexture" "models\csgo\G21C\Body"
+	"$additive" "1"
+	"$selfillum" "1"
+}

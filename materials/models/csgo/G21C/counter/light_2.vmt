@@ -1,0 +1,16 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/csgo/G21C/counter/numbers_plate1"
+	"$additive" "1"
+	"$decal" "1"
+	"$blendtintbybasealpha" "0"
+     //"$color2" "0 0 1"
+	Proxies // proxies are listed inside this block
+	{
+		GSR_G21C_AMMO
+		{
+			resultVar 1
+			prefixstring "models/csgo/G21C/counter/numbers_plate"
+		}
+	}
+}
