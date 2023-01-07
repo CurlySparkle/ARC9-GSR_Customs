@@ -28,7 +28,7 @@ SWEP.Description = [[The KS-23 is a Soviet shotgun, although because it uses a r
 
 SWEP.ViewModel = "models/weapons/csgo/c_shot_ks23.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"
-SWEP.DefaultBodygroups = "00000"
+SWEP.DefaultBodygroups = "000000000000"
 
 SWEP.Slot = 3
 
@@ -450,7 +450,7 @@ SWEP.AttachmentElements = {
             {2,1},
         },
     },
-    ["grip"] = {
+    ["pistol_grip"] = {
         Bodygroups = {
             {3,1},
         },
@@ -459,7 +459,7 @@ SWEP.AttachmentElements = {
         Bodygroups = {
             {1,1},
         },
-        AttPosMods = { [3] = { Pos = Vector(0.5, 15, 0.7), } },
+        AttPosMods = { [3] = { Pos = Vector(0.5, 17, 0.7), } },
     },
     ["sight"] = {
         Bodygroups = {
@@ -489,7 +489,7 @@ SWEP.AttachmentElements = {
 
 -- SWEP.Hook_ModifyBodygroups = function(wep, data)
     -- local model = data.model
-    -- if wep:HasElement("stock_extend") then model:SetBodygroup(3,1) end
+    -- if wep.Attachments[8].Installed then model:SetBodygroup(3,1) end
 -- end
 
 SWEP.Attachments = {
@@ -505,7 +505,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         Bone = "M37",
-        Category = "go_ithaca_barrel",
+        Category = "go_ks23_barrel",
         Icon_Offset = Vector(0, 0, 0),
     },
     {
@@ -527,11 +527,11 @@ SWEP.Attachments = {
 		InstalledElements = {"rail_side"},
     },
     {
-        PrintName = "Bottom",
+        PrintName = "Grips",
         DefaultAttName = "Default",
-        Category = {"csgo_rail_ub"},
+        Category = {"grip"},
         Bone = "Pump01",
-        Pos = Vector(0, 7, -2),
+        Pos = Vector(0.5, 5, -2),
         Ang = Angle(0, -90, 180),
         Scale = 1,
 		InstalledElements = {"rail_bottom"},
@@ -542,6 +542,8 @@ SWEP.Attachments = {
         Category = "go_mag",
         Pos = Vector(0,0,0),
         Ang = Angle(0,0,0),
+		InstalledElements = {"mag"},
+		RequireElements = {"barrel_long"},
     },
     {
         PrintName = "Ammo",
@@ -555,9 +557,9 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Bone = "M37",
         Category = "go_nova_stock",
-        InstalledElements = {"grip"},
-        Pos = Vector(0.5, -5.9, -1.65),
-        Ang = Angle(0, -90, 180),
+        InstalledElements = {"pistol_grip"},
+        Pos = Vector(0.5, -6.1, -1.65),
+        Ang = Angle(-5, -90, 180),
     },
     {
         PrintName = "Perk",
@@ -613,5 +615,5 @@ SWEP.Attachments = {
     },	
 }
 
-SWEP.GripPoseParam = 3
-SWEP.GripPoseParam2 = 0.5
+SWEP.GripPoseParam = 4.2
+SWEP.GripPoseParam2 = 0.8
