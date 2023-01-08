@@ -73,3 +73,32 @@ sound.Add( {
 		"weapons/csgo/vhs/vhs_silenced_fire_loop_3.wav",
     }
 } )
+
+sound.Add( {
+    name = "CSGO.M60.Fire_First",
+    channel = CHAN_USERBASE,
+    volume = 1.0,
+    level = 100,
+    pitch = {97,103},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/M60/m60_fire_1.wav",
+		"weapons/csgo/M60/m60_fire_2.wav",
+    }
+} )
+
+sound.Add( {
+    name = "CSGO.M60.Fire",
+    channel = CHAN_USERBASE,
+    volume = 1.0,
+    level = 100,
+    pitch = {97,103},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/M60/m60_fire_loop_1.wav",
+		"weapons/csgo/M60/m60_fire_loop_2.wav",
+		"weapons/csgo/M60/m60_fire_loop_3.wav",
+		"weapons/csgo/M60/m60_fire_loop_4.wav",
+		"weapons/csgo/M60/m60_fire_loop_5.wav",
+    }
+} )

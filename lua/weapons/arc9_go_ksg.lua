@@ -72,7 +72,7 @@ SWEP.RicochetChance = 0
 SWEP.Ammo = "buckshot" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 7 -- Self-explanatory.
+SWEP.ClipSize = 14 -- Self-explanatory.
 SWEP.SupplyLimit = 8 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
@@ -372,6 +372,7 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = path .. "sawedoff_draw.wav", t = 0 / 30},
+			{s = path .. "sawedoff_pump.wav", t = 8 / 30},
         },
     },
     ["draw"] = {

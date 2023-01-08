@@ -94,7 +94,7 @@ SWEP.Firemodes = {
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 1
+SWEP.Recoil = 1.5
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 3 -- Multiplier for vertical recoil
@@ -110,16 +110,16 @@ SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilDissipationRateSights = 50
 SWEP.RecoilResetTime = 0 -- How long the gun must go before the recoil pattern starts to reset.
 
-SWEP.RecoilAutoControl = 3 -- Multiplier for automatic recoil control.
+SWEP.RecoilAutoControl = 2 -- Multiplier for automatic recoil control.
 
 SWEP.RecoilKick = 1.5
 
-SWEP.RecoilMultCrouch = 0.7
+SWEP.RecoilMultCrouch = 0.8
 SWEP.RecoilMultHipFire = 1.25
 SWEP.RecoilAutoControlMultHipFire = 0.5
 
 SWEP.ViewRecoil = true
-SWEP.ViewRecoilUpMult = 7
+SWEP.ViewRecoilUpMult = 11
 
 SWEP.UseVisualRecoil = true
 SWEP.VisualRecoil = 2
@@ -198,10 +198,10 @@ SWEP.CrouchPos = Vector(-0.5, -0, -1)
 SWEP.CrouchAng = Angle(0, 0, 0)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(17, 35, 3)
+SWEP.CustomizePos = Vector(20, 35, 3)
 SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeNoRotate = false
---SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
+SWEP.CustomizeSnapshotPos = Vector(5, 5, 2)
 
 -------------------------- HoldTypes
 
@@ -282,6 +282,7 @@ SWEP.Animations = {
     -- },
     ["reload_start"] = {
         Source = "reload_start",
+		Mult = 0.9,
         IKTimeLine = {
             {
                 t = 0,
@@ -316,6 +317,7 @@ SWEP.Animations = {
     },
     ["reload_finish"] = {
         Source = "reload_end",
+		Mult = 0.9,
         IKTimeLine = {
             {
                 t = 0,
@@ -336,6 +338,7 @@ SWEP.Animations = {
     },
     ["reload_finish_empty"] = {
         Source = "reload_end_empty",
+		Mult = 0.9,
         IKTimeLine = {
             {
                 t = 0,
@@ -612,7 +615,12 @@ SWEP.Attachments = {
         Installed = "go_holdstyle_ks23_integral",
         Integral = true,
         Hidden = true,				
-    },	
+    },
+    {
+        PrintName = "Stickers",
+        StickerModel = "models/weapons/stickers/ks23_d.mdl",
+        Category = "stickers",
+    },
 }
 
 SWEP.GripPoseParam = 4.2
