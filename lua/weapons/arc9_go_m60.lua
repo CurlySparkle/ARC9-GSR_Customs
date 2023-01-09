@@ -97,14 +97,14 @@ SWEP.Recoil = 1.5
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 0.6 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 1 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 1.1 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
 SWEP.RecoilRandomUp = 0.3
 SWEP.RecoilRandomSide = 0.3
 
-SWEP.RecoilDissipationRate = 50 -- How much recoil dissipates per second.
+SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 1 -- Multiplier for automatic recoil control.
@@ -112,9 +112,11 @@ SWEP.RecoilAutoControl = 1 -- Multiplier for automatic recoil control.
 SWEP.RecoilKick = 1.25
 
 SWEP.RecoilMultCrouch = 0.7
-SWEP.RecoilMultHipFire = 1.25
+SWEP.RecoilMultHipFire = 1.35
 SWEP.RecoilAutoControlMultHipFire = 0.5
-SWEP.RecoilMultMove = 1.25
+SWEP.RecoilMultMove = 1.5
+
+SWEP.RecoilPatternDrift = 30
 
 -------------------------- SPREAD
 
@@ -407,7 +409,7 @@ SWEP.Attachments = {
         Pos = Vector(6, -0.8, 0),
         Ang = Angle(180, 0, -90),
         Category = {"csgo_optic"},
-        CorrectiveAng = Angle(-0.15, 0.2, 0),
+        CorrectiveAng = Angle(0, 0, 0),
 		InstalledElements = {"sight"},
     },
     {
