@@ -18,4 +18,6 @@ ATT.Category = {"go_mag_m60"}
 ATT.ClipSizeOverride = 50
 ATT.ReloadTimeMult = 0.85
 
+SWEP.DropMagazineModel = "models/weapons/csgo/mags/w_mach_m60_mag_50.mdl"
+
 ARC9.LoadAttachment(ATT, "csgo_m60_mag_50")

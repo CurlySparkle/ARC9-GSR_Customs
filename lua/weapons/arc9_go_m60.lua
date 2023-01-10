@@ -153,10 +153,11 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.74, -5, 0.2),
-    Ang = Angle(0, -0.2, -4),
+    Pos = Vector(-4.6, -5, 1.25),
+    Ang = Angle(0, -0.2, 0),
     Magnification = 1.25,
 	ViewModelFOV = 56,
+	CrosshairInSights = false
 }
 
 SWEP.ViewModelFOVBase = 65
@@ -219,7 +220,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.ShouldDropMag = true
 SWEP.ShouldDropMagEmpty = true
-SWEP.DropMagazineModel = "models/weapons/csgo/mags/w_rif_famas_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
+SWEP.DropMagazineModel = "models/weapons/csgo/mags/w_mach_m60_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
 SWEP.DropMagazineSounds = {"physics/metal/weapon_impact_soft1.wav", "physics/metal/weapon_impact_soft2.wav", "physics/metal/weapon_impact_soft3.wav"}
 SWEP.DropMagazineAmount = 1 -- Amount of mags to drop.
 SWEP.DropMagazineTime = 1.5

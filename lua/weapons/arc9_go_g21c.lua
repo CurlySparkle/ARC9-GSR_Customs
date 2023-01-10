@@ -118,6 +118,9 @@ SWEP.RecoilMultHipFire = 1.25
 SWEP.RecoilMultMove = 1.5
 SWEP.RecoilAutoControlMultHipFire = 0.5
 
+SWEP.UseVisualRecoil = true
+SWEP.VisualRecoilPunch = 0.3
+
 -------------------------- SPREAD
 
 SWEP.Spread = 0.02
@@ -128,7 +131,7 @@ SWEP.SpreadAddMove = 0.06
 SWEP.SpreadAddMidAir = 0.1
 SWEP.SpreadAddHipFire = 0
 SWEP.SpreadAddCrouch = -0.03
-SWEP.SpreadAddSights = -0.01
+SWEP.SpreadAddSights = -0.04
 
 -------------------------- HANDLING
 
@@ -152,11 +155,11 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.86, -5, 0.65),
+    Pos = Vector(-3.365, -1, 1.155),
     Ang = Angle(0, -0.1, 0),
     Magnification = 1.15,
 	ViewModelFOV = 40,
-	CrosshairInSights = true
+	CrosshairInSights = false
 }
 
 SWEP.ViewModelFOVBase = 65
