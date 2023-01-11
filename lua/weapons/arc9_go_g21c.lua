@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - GS:R: Customs"
 SWEP.SubCategory = "Submachine Guns"
 
-SWEP.PrintName = "G-21C"
+SWEP.PrintName = "G-21 C"
 SWEP.TrueName = "G-21 C"
 
 SWEP.Class = "Submachine Gun"
@@ -24,7 +24,7 @@ SWEP.Credits = {
     Assets = "Counter-Strike: Global Offensive/Insurgency: Sandstorm"
 }
 
-SWEP.Description = [[The FN FAL is designed as a long-range weapon with the opportunity to be used in closer range engagements. The full power rifle cartridge doesn't lack stopping power, but the high recoil present when firing the FAL full-auto encourages its use in semi-automatic fire mode.]]
+SWEP.Description = [[A compact submachine gun with designs that appear to facilitate an alternative firing mechanism, manufactured by TS Industries.]]
 
 SWEP.ViewModel = "models/weapons/csgo/c_smg_g21c.mdl"
 SWEP.WorldModel = "models/weapons/w_smg_tmp.mdl"
