@@ -2,9 +2,9 @@ local ATT = {}
 
 ATT = {}
 
-ATT.PrintName = "50 Rounds"
-ATT.CompactName = "50 M"
-ATT.Description = [[Decreases capacity to 50, increases reload speed.]]
+ATT.PrintName = "50 Mag"
+ATT.CompactName = "50 Mag"
+ATT.Description = [[Decreases capacity to 50 rounds. At the cost of an increase in reload speed.]]
 ATT.SortOrder = 1
 
 ATT.Icon = Material("entities/attachs/go_m249_mag_12g_45.png", "mips smooth")
