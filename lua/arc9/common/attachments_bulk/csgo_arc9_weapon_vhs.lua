@@ -4,7 +4,7 @@ ATT = {}
 
 ATT.PrintName = "Short Barrel"
 ATT.CompactName = "Short"
-ATT.Description = [[A short-length barrel. Offers superior handling at the cost of performance.]]
+ATT.Description = [[Short-length barrel. Offers superior handling at the cost of performance.]]
 ATT.SortOrder = 1
 
 ATT.Icon = Material("entities/attachs/go_famas_barrel_short.png", "mips smooth")
