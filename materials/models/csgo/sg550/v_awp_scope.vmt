@@ -1,0 +1,14 @@
+VertexLitGeneric
+{
+    "$phongdisablehalflambert" "1"
+	"$basetexture"	"models\weapons\v_models\snip_scout\v_awp_scope"
+	"$phong" "1"
+	"$phongBoost" "1"
+	"$phongExponent" "150"
+	"$phongFresnelRanges" "[.2 .2 1]"	
+	//"$envmap" "env_cubemap"
+	"$envmap" "models\weapons\shared\scope\eye-reflection-cubemap"
+	"$envmapfresnel" "1"
+	"$envmaptint" 		"[0.05 0.12 0.2]"
+
+}

@@ -610,8 +610,8 @@ SWEP.Attachments = {
     {
         PrintName = "Pourquoi2",
         Bone = "M37",
-        Pos = Vector(0.5, -5.7, -1.1),
-        Ang = Angle(-20, -90, 190),
+        Pos = Vector(0.7, -7.5, -1.5),
+        Ang = Angle(10, -100, 170),
         Category = {"go_grip_ks23"},
         Installed = "go_holdstyle_ks23_integral",
         Integral = true,

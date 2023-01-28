@@ -102,3 +102,18 @@ sound.Add( {
 		"weapons/csgo/M60/m60_fire_loop_5.wav",
     }
 } )
+
+sound.Add( {
+    name = "CSGO.Rytec.Fire",
+    channel = 10,
+    volume = 1.0,
+    level = 100,
+    pitch = {95,105},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/rytec/weap_xmike109_fire_bang_plr_01.wav",
+		"weapons/csgo/rytec/weap_xmike109_fire_bang_plr_02.wav",
+		"weapons/csgo/rytec/weap_xmike109_fire_bang_plr_03.wav",
+		"weapons/csgo/rytec/weap_xmike109_fire_bang_plr_04.wav",
+    }
+} )
