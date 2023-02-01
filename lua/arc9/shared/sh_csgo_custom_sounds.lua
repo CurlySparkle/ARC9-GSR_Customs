@@ -117,3 +117,34 @@ sound.Add( {
 		"weapons/csgo/rytec/weap_xmike109_fire_bang_plr_04.wav",
     }
 } )
+
+sound.Add( {
+    name = "CSGO.CX9.Fire",
+    channel = 10,
+    volume = 1.0,
+    level = 100,
+    pitch = {95,105},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/cx9/weap_secho_fire_plr_01.wav",
+		"weapons/csgo/cx9/weap_secho_fire_plr_02.wav",
+		"weapons/csgo/cx9/weap_secho_fire_plr_03.wav",
+		"weapons/csgo/cx9/weap_secho_fire_plr_04.wav",
+    }
+} )
+
+sound.Add( {
+    name = "CSGO.M13.Fire",
+    channel = 10,
+    volume = 1.0,
+    level = 100,
+    pitch = {95,105},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/m13/weap_mcharlie_fire_plr_01.ogg",
+		"weapons/csgo/m13/weap_mcharlie_fire_plr_02.ogg",
+		"weapons/csgo/m13/weap_mcharlie_fire_plr_03.ogg",
+		"weapons/csgo/m13/weap_mcharlie_fire_plr_04.ogg",
+    }
+} )
+

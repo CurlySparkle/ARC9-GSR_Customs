@@ -13,6 +13,7 @@
 
 	"$phong"					"1"
 	"$phongboost"				"5"
+     "$phongexponent"				"55"
 	"$phongfresnelranges"		"[0.32 0.72 0.99]"
 	"$phongalbedotint" 			"1"
 

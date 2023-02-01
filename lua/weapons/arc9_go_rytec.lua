@@ -3,7 +3,7 @@ AddCSLuaFile()
 SWEP.Base = "arc9_go_base"
 
 SWEP.Spawnable = true
-SWEP.Category = "ARC9 - GS:R"
+SWEP.Category = "ARC9 - GS:R: Customs"
 SWEP.SubCategory = "Sniper Rifles"
 
 SWEP.PrintName = "Rytec AMR"
@@ -65,7 +65,9 @@ SWEP.BodyDamageMults = {
 
 -------------------------- PHYS BULLET BALLISTICS
 
-SWEP.PhysBulletMuzzleVelocity = 2800 * 12
+SWEP.PhysBulletMuzzleVelocity = 2799 * 12
+SWEP.PhysBulletGravity = 2
+SWEP.PhysBulletDrag = 2.5
 
 -------------------------- MAGAZINE
 
@@ -93,7 +95,7 @@ SWEP.Firemodes = {
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 4.5
+SWEP.Recoil = 5
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 0.7 -- Multiplier for vertical recoil
@@ -111,11 +113,11 @@ SWEP.RecoilAutoControl = 1 -- Multiplier for automatic recoil control.
 
 SWEP.RecoilKick = 1
 
-SWEP.RecoilMultCrouch = 0.6
+SWEP.RecoilMultCrouch = 0.8
 
 SWEP.RecoilMultHipFire = 1.25
 SWEP.RecoilAutoControlMultHipFire = 0.5
-SWEP.RecoilMultSights = 0.8
+SWEP.RecoilMultSights = 0.9
 
 -------------------------- VISUAL RECOIL
 
@@ -145,6 +147,8 @@ SWEP.SpeedMultSights = 0.5
 
 SWEP.AimDownSightsTime = 0.5 -- How long it takes to go from hip fire to aiming down sights.
 SWEP.SprintToFireTime = 0.5 -- How long it takes to go from sprinting to being able to fire.
+
+SWEP.InstantSprintIdle = false
 
 -------------------------- MELEE
 
@@ -349,12 +353,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.7,
+                t = 0.5,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.7,
                 lhik = 1,
                 rhik = 1
             },
@@ -368,6 +372,9 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw_short",
+        EventTable = {
+            {s = "ARC9_CSGO_Rifle_Draw", t = 0 / 30},
+        },
     },
     ["holster"] = {
         Source = "holster",
@@ -449,12 +456,14 @@ SWEP.AttachmentElements = {
             {2,1},
 			{3,1},
         },
+	AttPosMods = { [3] = { Pos = Vector(40, -0.05, 0.33), } }	
     },
     ["barrel_short"] = {
         Bodygroups = {
             {2,2},
 			{3,2},
         },
+	AttPosMods = { [3] = { Pos = Vector(30, 0, 0.25), } }	
     },
     ["muzzle"] = {
         Bodygroups = {
@@ -468,7 +477,21 @@ SWEP.AttachmentElements = {
     },
 }
 
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local model = data.model
+    if wep:HasElement("barrel_long") and wep.Attachments[3].Installed then model:SetBodygroup(3,3) end
+	if wep:HasElement("barrel_short") and wep.Attachments[3].Installed then model:SetBodygroup(3,3) end
+end
+
 SWEP.Attachments = {
+    {
+        PrintName = "Barrels",
+        DefaultAttName = "Standard Barrel",
+        Category = {"go_rytec_barrel"},
+        Bone = "tag_attachments",
+        Pos = Vector(30, 0, 0.25),
+        Ang = Angle(0, 0, 0),
+    },
     {
         PrintName = "Optics",
         Bone = "tag_attachments",
@@ -505,6 +528,14 @@ SWEP.Attachments = {
 		Scale = 1,
     },
     {
+        PrintName = "Stock",
+        DefaultAttName = "Standard Stock",
+        Category = {"go_rytec_Stock"},
+        Bone = "tag_attachments",
+        Pos = Vector(0, 0, 0.25),
+        Ang = Angle(0, 0, 0),
+    },
+    {
         PrintName = "Ammo",
         Bone = "j_mag1",
         Category = {"go_ammo","go_ammo_sniper"},
@@ -514,7 +545,7 @@ SWEP.Attachments = {
     {
         PrintName = "Mag",
 		Bone = "j_mag1",
-        Category = "go_mag",
+        Category = "go_rytec_mag",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },

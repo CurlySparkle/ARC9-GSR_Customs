@@ -7,7 +7,6 @@ SWEP.Category = "ARC9 - GS:R: Customs"
 SWEP.SubCategory = "Assault Rifles"
 
 SWEP.PrintName = "VHS-2"
-SWEP.TrueName = "VHS-2"
 
 SWEP.Class = "Assault Rifle"
 -- SWEP.Trivia = {
