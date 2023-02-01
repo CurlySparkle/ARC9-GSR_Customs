@@ -227,8 +227,7 @@ SWEP.DropMagazineAng = Angle(0, -90, 0)
 local path = "weapons/csgo/m13/"
 
 SWEP.ShootSound = "CSGO.M13.Fire"
-SWEP.ShootSoundSilenced = "CSGO.VHS.Fire_Silenced"
-SWEP.FirstShootSoundSilenced = "CSGO.VHS.Silenced_Fire_First"
+SWEP.ShootSoundSilenced = "CSGO.M13.Fire_Silenced"
 SWEP.DistantShootSound = "CSGO.m4a4.Distance_Fire"
 SWEP.DryFireSound = "weapons/clipempty_rifle.wav"
 
