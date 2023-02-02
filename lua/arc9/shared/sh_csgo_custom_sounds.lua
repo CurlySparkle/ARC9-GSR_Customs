@@ -163,3 +163,33 @@ sound.Add( {
     }
 } )
 
+sound.Add( {
+    name = "CSGO.Origin12.Fire",
+    channel = 10,
+    volume = 1.0,
+    level = 100,
+    pitch = {95,105},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/origin12/weap_oscar12_fire_plr_01.ogg",
+		"weapons/csgo/origin12/weap_oscar12_fire_plr_02.ogg",
+		"weapons/csgo/origin12/weap_oscar12_fire_plr_03.ogg",
+		"weapons/csgo/origin12/weap_oscar12_fire_plr_04.ogg",
+    }
+} )
+
+sound.Add( {
+    name = "CSGO.Origin12.Fire_Silenced",
+    channel = 10,
+    volume = 1.0,
+    level = 100,
+    pitch = {95,105},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/origin12/weap_oscar12_fire_silenced_plr_01.ogg",
+		"weapons/csgo/origin12/weap_oscar12_fire_silenced_plr_02.ogg",
+		"weapons/csgo/origin12/weap_oscar12_fire_silenced_plr_03.ogg",
+		"weapons/csgo/origin12/weap_oscar12_fire_silenced_plr_04.ogg",
+    }
+} )
+
