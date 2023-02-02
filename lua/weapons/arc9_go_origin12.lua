@@ -104,7 +104,7 @@ SWEP.RecoilAutoControl = 5 -- Multiplier for automatic recoil control.
 
 SWEP.RecoilKick = 1.5
 
-SWEP.RecoilMultCrouch = 0.7
+SWEP.RecoilMultCrouch = 0.8
 SWEP.RecoilMultHipFire = 1.25
 SWEP.RecoilAutoControlMultHipFire = 0.5
 SWEP.RecoilMultSights = 0.9
@@ -146,7 +146,7 @@ SWEP.TracerColor = Color(255, 255, 155) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.3, -7, 0.9),
+    Pos = Vector(-3.6, -5, 0.9),
     Ang = Angle(0, 0, 4.5),
     Magnification = 1.1,
     ViewModelFOV = 56,
@@ -171,7 +171,7 @@ SWEP.MovingMidPoint = {
     Ang = Angle(0, 0, 0)
 }
 
-SWEP.MovingPos = Vector(0, -0.6, -0.6)
+SWEP.MovingPos = Vector(0, -0.5, -0.5)
 SWEP.MovingAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-0.5, -0, -1)
@@ -465,9 +465,9 @@ SWEP.AttachmentTableOverrides = {
     ["go_supp_shitvo"] = {
 	ModelAngleOffset = Angle(0, 0, 180),
     },
-    ["csgo_grip_no"] = {
-	ModelOffset = Vector(-5, -0.4, -0.8),
-	ModelAngleOffset = Angle(0, -5, 190),
+    ["csgo_p90_hold"] = {
+	ModelOffset = Vector(-5, -0.2, -0),
+	ModelAngleOffset = Angle(0, -4, 170),
     },
 }
 
@@ -530,7 +530,7 @@ SWEP.Attachments = {
     {
         PrintName = "Grips",
         DefaultAttName = "Default",
-        Category = {"grip","grip_aug_2_alt"},
+        Category = {"grip","grip_p90"},
         Bone = "tag_attachments",
         Pos = Vector(14, 0, -1.5),
         Ang = Angle(0, 0, 180),
@@ -614,5 +614,5 @@ SWEP.Attachments = {
     },
 }
 
-SWEP.GripPoseParam = 4.5
+SWEP.GripPoseParam = 3
 SWEP.GripPoseParam2 = 0.5
