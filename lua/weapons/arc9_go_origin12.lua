@@ -347,12 +347,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.7,
+                t = 0.5,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.95,
+                t = 0.8,
                 lhik = 1,
                 rhik = 1
             },
@@ -458,7 +458,7 @@ SWEP.Animations = {
 
 SWEP.AttachmentTableOverrides = {
     ["arc9_stat_proscreen_main"] = {
-    ModelOffset = Vector(12.8, -0.7, 0.65),
+    ModelOffset = Vector(11.3, -0.6, 0.69),
 	ModelAngleOffset = Angle(0, 0, 0),
 	Scale = 0.8,
     },
@@ -481,6 +481,9 @@ SWEP.AttachmentElements = {
         Bodygroups = {
             {3,1},
         },
+    },
+    ["stock_retracted"] = {
+	AttPosMods = { [6] = { Pos = Vector(1.25, 0, 1), } }	
     },
     ["sights"] = {
         Bodygroups = {
@@ -536,6 +539,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 180),
 		Scale = 1,
 		InstalledElements = {"grip_none"},
+    },
+    {
+        PrintName = "Stock (Opt)",
+        DefaultAttName = "Standard",
+        Category = {"csgo_origin12_tube"},
+        Bone = "tag_attachments",
+        Pos = Vector(0, 0, 1),
+        Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Stock",

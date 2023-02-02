@@ -78,7 +78,7 @@ sound.Add( {
     name = "CSGO.M60.Fire_First",
     channel = CHAN_USERBASE,
     volume = 1.0,
-    level = 100,
+    level = 120,
     pitch = {97,103},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
@@ -91,7 +91,7 @@ sound.Add( {
     name = "CSGO.M60.Fire",
     channel = CHAN_USERBASE,
     volume = 1.0,
-    level = 100,
+    level = 120,
     pitch = {97,103},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
@@ -107,7 +107,7 @@ sound.Add( {
     name = "CSGO.Rytec.Fire",
     channel = 10,
     volume = 1.0,
-    level = 100,
+    level = 120,
     pitch = {95,105},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
@@ -122,7 +122,7 @@ sound.Add( {
     name = "CSGO.CX9.Fire",
     channel = 10,
     volume = 1.0,
-    level = 100,
+    level = 120,
     pitch = {95,105},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
@@ -137,7 +137,7 @@ sound.Add( {
     name = "CSGO.M13.Fire",
     channel = 10,
     volume = 1.0,
-    level = 100,
+    level = 120,
     pitch = {95,105},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
@@ -152,7 +152,7 @@ sound.Add( {
     name = "CSGO.M13.Fire_Silenced",
     channel = 10,
     volume = 1.0,
-    level = 100,
+    level = 120,
     pitch = {95,105},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
@@ -167,7 +167,7 @@ sound.Add( {
     name = "CSGO.Origin12.Fire",
     channel = 10,
     volume = 1.0,
-    level = 100,
+    level = 120,
     pitch = {95,105},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
@@ -182,7 +182,7 @@ sound.Add( {
     name = "CSGO.Origin12.Fire_Silenced",
     channel = 10,
     volume = 1.0,
-    level = 100,
+    level = 120,
     pitch = {95,105},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
@@ -190,6 +190,21 @@ sound.Add( {
 		"weapons/csgo/origin12/weap_oscar12_fire_silenced_plr_02.ogg",
 		"weapons/csgo/origin12/weap_oscar12_fire_silenced_plr_03.ogg",
 		"weapons/csgo/origin12/weap_oscar12_fire_silenced_plr_04.ogg",
+    }
+} )
+
+sound.Add( {
+    name = "CSGO.M32.Fire",
+    channel = 10,
+    volume = 1.0,
+    level = 120,
+    pitch = {95,105},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/m32/weap_mike32_fire_plr_01.wav",
+		"weapons/csgo/m32/weap_mike32_fire_plr_02.wav",
+		"weapons/csgo/m32/weap_mike32_fire_plr_03.wav",
+		"weapons/csgo/m32/weap_mike32_fire_plr_04.wav",
     }
 } )
 
