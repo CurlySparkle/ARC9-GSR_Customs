@@ -150,8 +150,8 @@ SWEP.TracerColor = Color(255, 255, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.17, -4, 0.45),
-    Ang = Angle(0, 0, 0.5),
+    Pos = Vector(-3.6, -4, 0.4),
+    Ang = Angle(0, 0.5, 1.5),
     Magnification = 1.15,
     ViewModelFOV = 56,
 	CrosshairInSights = false
@@ -205,6 +205,7 @@ SWEP.AnimDraw = false
 
 SWEP.MuzzleParticle = "weapon_muzzle_flash_assaultrifle"
 SWEP.AfterShotParticle = "barrel_smoke_plume"
+SWEP.AfterShotParticleDelay = -1
 SWEP.MuzzleEffectQCA = 1
 SWEP.ProceduralViewQCA = 1
 
@@ -258,17 +259,17 @@ SWEP.Animations = {
             {
                 t = 0,
                 lhik = 1,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.2,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.7,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.75,
@@ -292,17 +293,17 @@ SWEP.Animations = {
             {
                 t = 0,
                 lhik = 1,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.2,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.7,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.95,
@@ -328,17 +329,17 @@ SWEP.Animations = {
             {
                 t = 0,
                 lhik = 1,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.2,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.5,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.7,
@@ -361,7 +362,7 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
-		Mult = 0.8,
+		Mult = 0.5,
         EventTable = {
             {s = path .. "vector_foley_hand_grab.ogg", t = 0 / 30},
         },
@@ -386,17 +387,17 @@ SWEP.Animations = {
             {
                 t = 0,
                 lhik = 1,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.15,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.7,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 1.13,
@@ -466,7 +467,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optics",
         Bone = "tag_attachments",
-        Pos = Vector(3, 0, 0.55),
+        Pos = Vector(3, 0, 0.66),
         Ang = Angle(0, 0, 0),
         Category = {"csgo_optic",},
         CorrectiveAng = Angle(0, 0, 0),
@@ -477,10 +478,10 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Muzzle",
         Category = {"muzzle"},
         Bone = "tag_attachments",
-        Pos = Vector(11.8, 0, -1.44),
+        Pos = Vector(11.4, 0, -1.44),
         Ang = Angle(0, 0, 0),
 		InstalledElements = {"muzzle"},
-		Scale = 0.85,
+		Scale = 1,
     },
     {
         PrintName = "Tactical",
@@ -513,13 +514,13 @@ SWEP.Attachments = {
         PrintName = "Ammo",
         Bone = "j_mag1",
         Category = {"go_ammo"},
-        Pos = Vector(0, -1.5, -1.5),
+        Pos = Vector(0, 0, -1.5),
         Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Mag",
 		Bone = "j_mag1",
-        Category = {"go_mag"},
+        Category = {"go_mag_vector"},
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
@@ -577,8 +578,8 @@ SWEP.Attachments = {
     {
         PrintName = "Pourquoi",
         Bone = "tag_attachments",
-        Pos = Vector(-1.3, 0, -0.15),
-        Ang = Angle(0, 0, 0),
+        Pos = Vector(-0.9, 0.3, -2.3),
+        Ang = Angle(5, 1, 180),
         Category = {"go_grip_vector"},
         Installed = "go_holdstyle_vector_integral",
         Integral = true,
