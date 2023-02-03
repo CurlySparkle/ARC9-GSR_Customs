@@ -256,3 +256,60 @@ sound.Add( {
     }
 } )
 
+sound.Add( {
+    name = "CSGO.Vector.Fire",
+    channel = 10,
+    volume = 1.0,
+    level = 120,
+    pitch = {95,105},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/vector/vector_fire_1.ogg",
+		"weapons/csgo/vector/vector_fire_2.ogg",
+    }
+} )
+
+sound.Add( {
+    name = "CSGO.Vector.Fire_Loop",
+    channel = 10,
+    volume = 1.0,
+    level = 120,
+    pitch = {95,105},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/vector/vector_fire_loop_1.ogg",
+		"weapons/csgo/vector/vector_fire_loop_2.ogg",
+		"weapons/csgo/vector/vector_fire_loop_3.ogg",
+		"weapons/csgo/vector/vector_fire_loop_4.ogg",
+		"weapons/csgo/vector/vector_fire_loop_5.ogg",
+    }
+} )
+
+sound.Add( {
+    name = "CSGO.Vector_Silenced.Fire",
+    channel = 10,
+    volume = 1.0,
+    level = 120,
+    pitch = {95,105},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/vector/vector_silenced_fire_1.ogg",
+		"weapons/csgo/vector/vector_silenced_fire_2.ogg",
+    }
+} )
+
+sound.Add( {
+    name = "CSGO.Vector_Silenced.Fire_Loop",
+    channel = 10,
+    volume = 1.0,
+    level = 120,
+    pitch = {95,105},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/vector/vector_silenced_fire_loop_1.ogg",
+		"weapons/csgo/vector/vector_silenced_fire_loop_2.ogg",
+		"weapons/csgo/vector/vector_silenced_fire_loop_3.ogg",
+		"weapons/csgo/vector/vector_silenced_fire_loop_4.ogg",
+		"weapons/csgo/vector/vector_silenced_fire_loop_5.ogg",
+    }
+} )
