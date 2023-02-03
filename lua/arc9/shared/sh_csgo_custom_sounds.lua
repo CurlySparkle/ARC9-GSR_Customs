@@ -1,6 +1,54 @@
 sound.Add( {
+    name = "CSGO.SVD.Fire",
+    channel = 10,
+    volume = 1.0,
+    level = 120,
+    pitch = {90,110},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/svd/svd_fire.ogg",
+    }
+} )
+
+sound.Add( {
+    name = "CSGO.SVD.Silenced_Fire",
+    channel = 10,
+    volume = 1.0,
+    level = 120,
+    pitch = {90,110},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/svd/svd_fire_suppressed.ogg",
+    }
+} )
+
+sound.Add( {
+    name = "CSGO.SVD.Distance_Fire",
+    channel = CHAN_WEAPON,
+    volume = 0.3,
+    level = 120,
+    pitch = {97,103},
+    sound = {
+        "weapons/csgo/svd/svd_fire_dist.ogg",
+    }
+} )
+
+
+sound.Add( {
+    name = "CSGO.SG550.Fire",
+    channel = 10,
+    volume = 1.0,
+    level = 120,
+    pitch = {90,110},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/sg550/sg550-1.wav",
+    }
+} )
+
+sound.Add( {
     name = "CSGO.G21C.Fire",
-    channel = CHAN_USERBASE,
+    channel = 10,
     volume = 1.0,
     level = 100,
     pitch = {97,103},
@@ -12,7 +60,7 @@ sound.Add( {
 
 sound.Add( {
     name = "CSGO.G21C.Distance_Fire",
-    channel = CHAN_USERBASE,
+    channel = 10,
     volume = 1.0,
     level = 100,
     pitch = {97,103},
@@ -24,7 +72,7 @@ sound.Add( {
 
 sound.Add( {
     name = "CSGO.VHS.Fire_First",
-    channel = CHAN_USERBASE,
+    channel = 10,
     volume = 1.0,
     level = 100,
     pitch = {97,103},
@@ -36,7 +84,7 @@ sound.Add( {
 
 sound.Add( {
     name = "CSGO.VHS.Fire",
-    channel = CHAN_USERBASE,
+    channel = 10,
     volume = 1.0,
     level = 100,
     pitch = {97,103},
@@ -50,7 +98,7 @@ sound.Add( {
 
 sound.Add( {
     name = "CSGO.VHS.Silenced_Fire_First",
-    channel = CHAN_USERBASE,
+    channel = 10,
     volume = 1.0,
     level = 100,
     pitch = {97,103},
@@ -62,7 +110,7 @@ sound.Add( {
 
 sound.Add( {
     name = "CSGO.VHS.Fire_Silenced",
-    channel = CHAN_USERBASE,
+    channel = 10,
     volume = 1.0,
     level = 100,
     pitch = {97,103},
@@ -76,7 +124,7 @@ sound.Add( {
 
 sound.Add( {
     name = "CSGO.M60.Fire_First",
-    channel = CHAN_USERBASE,
+    channel = 10,
     volume = 1.0,
     level = 120,
     pitch = {97,103},
@@ -89,7 +137,7 @@ sound.Add( {
 
 sound.Add( {
     name = "CSGO.M60.Fire",
-    channel = CHAN_USERBASE,
+    channel = 10,
     volume = 1.0,
     level = 120,
     pitch = {97,103},

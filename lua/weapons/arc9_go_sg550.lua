@@ -9,18 +9,10 @@ SWEP.SubCategory = "Sniper Rifles"
 SWEP.PrintName = "SG-550"
 
 SWEP.Class = "Sniper Rifle"
-SWEP.Trivia = {
-    ["Country of Origin"] = "Switzerland",
-    ["Caliber"] = "5.56 NATO",
-    ["Weight (Loaded)"] = "7.02kg",
-    ["Projectile Weight"] = "4 Grams",
-    ["Muzzle Velocity"] = "3100 Feet/Second",
-    ["Muzzle Energy"] = "1650 Joules"
-}
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/SlogoKolt/Arctic/TheOnly8Z/Matsilagi/CturiX",
-    Assets = "Counter-Strike: Global Offensive/Insurgency: Sandstorm"
+    Assets = "Counter-Strike: Source"
 }
 
 SWEP.Description = [[The SG550 is a semi-automatic sniper rifle that trades a high rate of fire and powerful long-distance damage for sluggish movement speed and big price tag.]]
@@ -82,25 +74,21 @@ SWEP.Crosshair = true
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 600
+SWEP.RPM = 240 
 
 SWEP.Firemodes = {
     {
         Mode = 1,
     },
-    {
-        Mode = 3,
-        RPM = 800
-    }
 }
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 1.25
+SWEP.Recoil = 2
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 0.7 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 0.7 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 1 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
@@ -112,30 +100,12 @@ SWEP.RecoilResetTime = 0 -- How long the gun must go before the recoil pattern s
 
 SWEP.RecoilAutoControl = 1 -- Multiplier for automatic recoil control.
 
-SWEP.RecoilKick = 0.5
+SWEP.RecoilKick = 1
 
-SWEP.RecoilMultCrouch = 0.6
+SWEP.RecoilMultCrouch = 0.8
 
 SWEP.RecoilMultHipFire = 1.25
 SWEP.RecoilAutoControlMultHipFire = 0.5
-
--------------------------- VISUAL RECOIL
-
-SWEP.RecoilKick = 1
-
-SWEP.UseVisualRecoil = true
-
-SWEP.VisualRecoilUp = 0 -- Vertical tilt for visual recoil.
-SWEP.VisualRecoilSide = 0.01 -- Horizontal tilt for visual recoil.
-SWEP.VisualRecoilRoll = 0 -- Roll tilt for visual recoil.
-
-SWEP.VisualRecoilCenter = Vector(0, 4, 0) -- The "axis" of visual recoil. Where your hand is.
-
-SWEP.VisualRecoilPunch = 1 -- How far back visual recoil moves the gun.
-
-SWEP.VisualRecoilMult = 1
-
-SWEP.VisualRecoilHipFire = false
 
 -------------------------- SPREAD
 
@@ -160,7 +130,7 @@ SWEP.SprintToFireTime = 0.25 -- How long it takes to go from sprinting to being 
 
 SWEP.Bash = true
 SWEP.PrimaryBash = false
-SWEP.PreBashTime = 0.15
+SWEP.PreBashTime = 0.2
 SWEP.PostBashTime = 0.65
 
 -------------------------- TRACERS
@@ -196,11 +166,11 @@ SWEP.MovingMidPoint = {
     Ang = Angle(0, 0, 0)
 }
 
-SWEP.MovingPos = Vector(0, -1, -1)
+SWEP.MovingPos = Vector(0, -0.6, -0.6)
 SWEP.MovingAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(-0.5, -0, -1)
-SWEP.CrouchAng = Angle(0, 0, 0)
+SWEP.CrouchPos = Vector(-0.5, -0, -0.8)
+SWEP.CrouchAng = Angle(0, 0, -7)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizePos = Vector(24, 35, 2)
@@ -242,39 +212,32 @@ SWEP.ShouldDropMag = true
 SWEP.DropMagazineModel = "models/weapons/csgo/mags/w_snip_scar20_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
 SWEP.DropMagazineSounds = {"physics/metal/weapon_impact_soft1.wav", "physics/metal/weapon_impact_soft2.wav", "physics/metal/weapon_impact_soft3.wav"}
 SWEP.DropMagazineAmount = 1 -- Amount of mags to drop.
-SWEP.DropMagazineTime = 0.56
+SWEP.DropMagazineTime = 0.9
 SWEP.DropMagazineQCA = 3
 SWEP.DropMagazineAng = Angle(0, -90, 0)
 
 -------------------------- SOUNDS
 
 local path = "weapons/csgo/scar20/"
+local path2 = "weapons/csgo/sg550/"
 
-SWEP.ShootSound = "CSGO.scar20.Fire"
+SWEP.ShootSound = "CSGO.SG550.Fire"
 SWEP.ShootSoundSilenced = "CSGO.scar20.Silenced_Fire"
 SWEP.DistantShootSound = "CSGO.SCAR20.Distance_Fire"
 SWEP.DryFireSound = "weapons/clipempty_rifle.wav"
 
 SWEP.FiremodeSound = "CSGO.Rifle.Switch_Mode"
 
-SWEP.EnterSightsSound = path .. "sg556_zoom_in.wav"
-SWEP.ExitSightsSound = path .. "sg556_zoom_out.wav"
-
-SWEP.HideBones = {
-}
-
-SWEP.HideBonesSilenced = {}
-
-SWEP.ReloadHideBoneTables = {
-}
+SWEP.EnterSightsSound = "weapons/csgo/sg556/sg556_zoom_in.wav"
+SWEP.ExitSightsSound = "weapons/csgo/sg556/sg556_zoom_out.wav"
 
 SWEP.Animations = {
     ["fire"] = {
         Source = {"shoot1"},
     },
-    -- ["fire_sights"] = {
-        -- Source = "shoot1_ads",
-    -- },
+    ["fire_sights"] = {
+        Source = "shoot1_ads",
+    },
     ["reload"] = {
         Source = "reload_short",
         IKTimeLine = {
@@ -300,8 +263,8 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "scar20_clipout.wav", t = 13 / 30},
-            {s = path .. "scar20_clipin.wav", t = 38 / 30},
+            {s = path2 .. "sg550_clipout.wav", t = 13 / 30},
+            {s = path2 .. "sg550_clipin.wav", t = 25 / 30},
         },
     },
     ["reload_empty"] = {
@@ -329,8 +292,8 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "scar20_clipout.wav", t = 13 / 30},
-            {s = path .. "scar20_clipin.wav", t = 38 / 30},
+            {s = path2 .. "sg550_clipout.wav", t = 13 / 30},
+            {s = path2 .. "sg550_clipin.wav", t = 25 / 30},
             {s = path .. "scar20_boltback.wav", t = 58 / 30},
         },
     },
@@ -360,8 +323,7 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = path .. "scar20_draw.wav", t = 0 / 30},
-            {s = path .. "scar20_boltback.wav", t = 14 / 30},
-            {s = path .. "scar20_boltforward.wav", t = 18 / 30},
+            {s = path .. "sg550_boltpull.wav", t = 14 / 30},
         },
     },
     ["draw"] = {
@@ -403,19 +365,55 @@ SWEP.Animations = {
 SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.AttachmentElements = {
+    ["mag"] = {
+        Bodygroups = {
+            {1,1},
+        },
+    },
+    ["barrel_short"] = {
+        Bodygroups = {
+            {2,1},
+        },
+    },
+    ["barrel_very_short"] = {
+        Bodygroups = {
+            {2,2},
+        },
+    },
+    ["rail_sights"] = {
+        Bodygroups = {
+            {3,1},
+        },
+    },
+    ["scope_sg550"] = {
+    },
+    ["rail_grip"] = {
+        Bodygroups = {
+            {4,1},
+        },
+    },
+    ["rail_laser"] = {
+        Bodygroups = {
+            {5,1},
+        },
+    },
 }
 
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local model = data.model
+    if wep:HasElement("scope_sg550") then model:SetBodygroup(3,0) end
+end
 
 SWEP.Attachments = {
     {
         PrintName = "Scope",
         Bone = "v_weapon.SCAR_Parent",
-        Pos = Vector(0, -6.4, 3.4),
+        Pos = Vector(0, -5.71, 2.5),
         Ang = Angle(90, 0, -90),
         Category = {"csgo_optic"},
-        InstalledElements = {"mount"},
-        Installed = "csgo_optic_scope_scar20",
-		//Integral = true,
+        InstalledElements = {"rail_sights"},
+        Installed = "csgo_optic_scope_sg550",
+		Integral = "csgo_optic_scope_sg550",
         CorrectiveAng = Angle(0.35, -1.25, 0),
     },
     {
@@ -423,43 +421,35 @@ SWEP.Attachments = {
 		Bone = "v_weapon.SCAR_Parent",
         Pos = Vector(0, -4.52, 21),
         Ang = Angle(90, 0, -90),
-        Category = "go_scar20_barrel"
+        Category = "go_sg550_barrel"
     },
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Category = {"muzzle","muzzle_snipers"},
         Bone = "v_weapon.SCAR_Parent",
-        Pos = Vector(0, -4.52, 23.1),
+        Pos = Vector(0, -4.05, 35),
         Ang = Angle(90, 0, -90),
 		Scale = 1,
     },
     {
         PrintName = "Grip",
         DefaultAttName = "Default",
-        Category = {"grip","grip_scar20"},
+        Category = {"grip"},
         Bone = "v_weapon.SCAR_Parent",
-        Pos = Vector(0, -3, 10),
+        Pos = Vector(0, -2.66, 11.3),
         Ang = Angle(90, 0, 90),
-    },
-    {
-        PrintName = "Stock",
-        DefaultAttName = "Default",
-        Category = {"csgo_tube","stock_retract"},
-        Bone = "v_weapon.SCAR_Parent",
-		InstalledElements = {"stock_none"},
-        Pos = Vector(0, -5.3, -3.5),
-        Ang = Angle(90, 0, -90),
-		Scale = 1,
+		InstalledElements = {"rail_grip"},
     },
     {
         PrintName = "Tactical",
         DefaultAttName = "Default",
         Category = "csgo_tac",
         Bone = "v_weapon.SCAR_Parent",
-        Pos = Vector(-0.8, -4.6, 18),
+        Pos = Vector(-0.955, -4.27, 16.2),
         Ang = Angle(90, 90, 90),
 		LaserCorrectionAngle = Angle(0.4, 0, 1),
+		InstalledElements = {"rail_laser"},
     },
     {
         PrintName = "Ammo",
@@ -482,24 +472,24 @@ SWEP.Attachments = {
         Category = "go_skins_scar20",
 		CosmeticOnly = true,
     },
-    -- {
-        -- PrintName = "Stickers",
-        -- StickerModel = "models/weapons/stickers/v_models/snip_scar20_decal_a.mdl",
-        -- Category = "stickers",
-    -- },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/v_models/snip_scar20_decal_b.mdl",
+        StickerModel = "models/weapons/stickers/snip_sg500_decal_a.mdl",
         Category = "stickers",
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/v_models/snip_scar20_decal_c.mdl",
+        StickerModel = "models/weapons/stickers/snip_sg500_decal_b.mdl",
         Category = "stickers",
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/v_models/snip_scar20_decal_d.mdl",
+        StickerModel = "models/weapons/stickers/snip_sg500_decal_c.mdl",
+        Category = "stickers",
+    },
+    {
+        PrintName = "Stickers",
+        StickerModel = "models/weapons/stickers/snip_sg500_decal_d.mdl",
         Category = "stickers",
     },
     {
@@ -511,8 +501,9 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Category = "charm",
         Bone = "v_weapon.SCAR_Parent", -- relevant bone any attachments will be mostly referring to
-        Pos = Vector(0.71, -4.75, 5.6), -- offset that the attachment will be relative to the bone
+        Pos = Vector(0.5, -3.6, 5.6), -- offset that the attachment will be relative to the bone
         Ang = Angle(90, 0, -90),
+		Scale = 1.3,
     },
     {
         PrintName = "View",
@@ -521,9 +512,9 @@ SWEP.Attachments = {
     {
         PrintName = "Stats",
         Category = "killcounter",
-        Bone = "v_weapon.stattrack",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, -90, 0),
+        Bone = "v_weapon.SCAR_Parent",
+        Pos = Vector(0.55, -3.5, 2.5),
+        Ang = Angle(90, 0, -90),
 		CosmeticOnly = true,
     },
     {
@@ -538,5 +529,5 @@ SWEP.Attachments = {
     },
 }
 
-SWEP.GripPoseParam = 4.5
+SWEP.GripPoseParam = 4.7
 SWEP.GripPoseParam2 = 0.5

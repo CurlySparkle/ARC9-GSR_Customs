@@ -82,7 +82,7 @@ SWEP.Crosshair = true
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 160
+SWEP.RPM = 250
 
 SWEP.Firemodes = {
     {
@@ -97,54 +97,37 @@ SWEP.Recoil = 1.5
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 0.7 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 0.7 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 5 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
 SWEP.RecoilRandomUp = 0.3
-SWEP.RecoilRandomSide = 0.3
+SWEP.RecoilRandomSide = 0
 
 SWEP.RecoilDissipationRate = 50 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 1 -- Multiplier for automatic recoil control.
 
-SWEP.RecoilKick = 0.5
+SWEP.RecoilKick = 1
 
 SWEP.RecoilMultCrouch = 0.6
-
 SWEP.RecoilMultHipFire = 1.25
 SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- VISUAL RECOIL
 
-SWEP.RecoilKick = 1
-
-SWEP.UseVisualRecoil = true
-
-SWEP.VisualRecoilUp = 0 -- Vertical tilt for visual recoil.
-SWEP.VisualRecoilSide = 0.01 -- Horizontal tilt for visual recoil.
-SWEP.VisualRecoilRoll = 0 -- Roll tilt for visual recoil.
-
-SWEP.VisualRecoilCenter = Vector(0, 4, 0) -- The "axis" of visual recoil. Where your hand is.
-
-SWEP.VisualRecoilPunch = 1 -- How far back visual recoil moves the gun.
-
-SWEP.VisualRecoilMult = 1
-
-SWEP.VisualRecoilHipFire = false
-
 -------------------------- SPREAD
 
 SWEP.Spread = 0.002
 
-SWEP.SpreadAddRecoil = 0.0002 -- Applied per unit of recoil.
+SWEP.SpreadAddShooting = 0.01 -- Applied per unit of recoil.
 
-SWEP.SpreadAddMove = 0.2
+SWEP.SpreadAddMove = 0.15
 SWEP.SpreadAddMidAir = 0.1
 SWEP.SpreadAddHipFire = 0.05
 SWEP.SpreadAddCrouch = -0.01
-SWEP.SpreadAddSights = -0.1
+SWEP.SpreadAddSights = -0.5
 
 
 -------------------------- HANDLING
@@ -155,14 +138,14 @@ SWEP.SwayMultSights = 0
 
 SWEP.SpeedMultSights = 0.5
 
-SWEP.AimDownSightsTime = 0.3 -- How long it takes to go from hip fire to aiming down sights.
-SWEP.SprintToFireTime = 0.3 -- How long it takes to go from sprinting to being able to fire.
+SWEP.AimDownSightsTime = 0.5 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.SprintToFireTime = 0.5 -- How long it takes to go from sprinting to being able to fire.
 
 -------------------------- MELEE
 
 SWEP.Bash = true
 SWEP.PrimaryBash = false
-SWEP.PreBashTime = 0.15
+SWEP.PreBashTime = 0.2
 SWEP.PostBashTime = 0.65
 
 -------------------------- TRACERS
@@ -173,11 +156,11 @@ SWEP.TracerColor = Color(255, 255, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-4.84, -9, 2.15),
-    Ang = Angle(1.1, -3, 0),
+    Pos = Vector(-3.43, -8, 0.7),
+    Ang = Angle(0, 0.5, 0),
     Magnification = 1.15,
     ViewModelFOV = 56,
-	CrosshairInSights = true
+	CrosshairInSights = false
 }
 
 SWEP.ViewModelFOVBase = 56
@@ -240,21 +223,21 @@ SWEP.ShellScale = 0.1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.ShouldDropMag = true
-SWEP.DropMagazineModel = "models/weapons/csgo/mags/w_snip_scar20_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
+SWEP.DropMagazineModel = "models/weapons/csgo/mags/w_snip_svd_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
 SWEP.DropMagazineSounds = {"physics/metal/weapon_impact_soft1.wav", "physics/metal/weapon_impact_soft2.wav", "physics/metal/weapon_impact_soft3.wav"}
 SWEP.DropMagazineAmount = 1 -- Amount of mags to drop.
-SWEP.DropMagazineTime = 0.56
+SWEP.DropMagazineTime = 1.2
 SWEP.DropMagazineQCA = 3
 SWEP.DropMagazineAng = Angle(0, -90, 0)
 
 -------------------------- SOUNDS
 
-local path = "weapons/csgo/scar20/"
+local path = "weapons/csgo/svd/"
 
-SWEP.ShootSound = "CSGO.scar20.Fire"
-SWEP.ShootSoundSilenced = "CSGO.scar20.Silenced_Fire"
-SWEP.DistantShootSound = "CSGO.SCAR20.Distance_Fire"
-SWEP.DryFireSound = "weapons/clipempty_rifle.wav"
+SWEP.ShootSound = "CSGO.SVD.Fire"
+SWEP.ShootSoundSilenced = "CSGO.SVD.Silenced_Fire"
+SWEP.DistantShootSound = "CSGO.SVD.Distance_Fire"
+SWEP.DryFireSound = "weapons/csgo/svd/svd_empty.ogg"
 
 SWEP.FiremodeSound = "CSGO.Rifle.Switch_Mode"
 
@@ -270,6 +253,8 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload_short",
+		MinProgress = 0.6,
+		DumpClip = true,
         IKTimeLine = {
             {
                 t = 0,
@@ -282,23 +267,24 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.7,
+                t = 0.5,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.9,
                 lhik = 1,
                 rhik = 1
             },
         },
         EventTable = {
-            {s = path .. "scar20_clipout.wav", t = 16 / 30},
-            {s = path .. "scar20_clipin.wav", t = 60 / 30},
+            {s = path .. "svd_magout.ogg", t = 14 / 30},
+            {s = path .. "svd_magin.ogg", t = 45 / 30},
         },
     },
     ["reload_empty"] = {
         Source = "reload",
+		MinProgress = 0.8,
         IKTimeLine = {
             {
                 t = 0,
@@ -322,9 +308,9 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "scar20_clipout.wav", t = 17 / 30},
-            {s = path .. "scar20_clipin.wav", t = 67 / 30},
-			{s = path .. "scar20_boltforward.wav", t = 92 / 30},
+            {s = path .. "svd_magout.ogg", t = 14 / 30},
+            {s = path .. "svd_magin.ogg", t = 45 / 30},
+			{s = path .. "svd_boltrelease.ogg", t = 80 / 30},
         },
     },
     ["ready"] = {
@@ -352,13 +338,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "scar20_draw.wav", t = 0 / 30},
-            {s = path .. "scar20_boltback.wav", t = 11 / 30},
-            {s = path .. "scar20_boltforward.wav", t = 25 / 30},
+            {s = path .. "svd_raise.ogg", t = 0 / 30},
+            {s = path .. "svd_boltback.ogg", t = 11 / 30},
+            {s = path .. "svd_boltrelease.ogg", t = 25 / 30},
         },
     },
     ["draw"] = {
         Source = "draw_short",
+        EventTable = {
+            {s = path .. "svd_raise.wav", t = 0 / 30},
+        },
     },
     ["holster"] = {
         Source = "holster",
@@ -374,11 +363,11 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-		Mult = 2,
+		Mult = 2.5,
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-		Mult = 2,
+		Mult = 2.5,
     },
     ["inspect"] = {
         Source = "lookat01",
@@ -394,12 +383,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.7,
+                t = 0.3,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 1,
+                t = 0.55,
                 lhik = 1,
                 rhik = 1
             },
@@ -417,12 +406,23 @@ SWEP.Animations = {
 
 -------------------------- ATTACHMENTS
 
+SWEP.Hook_Think	= ARC9.CSGO.BlendEmpty
+
 SWEP.DefaultBodygroups = "00000000000000"
 
 -- SWEP.AttachmentTableOverrides = {
-    -- ["go_mag_extended"] = {
-        -- DropMagazineModel = "models/weapons/csgo/mags/w_snip_scar20_mag.mdl",
-		-- Scale = 1.5
+    -- ["csgo_rail_optic_1"] = {
+    -- ModelOffset = Vector(-2.8, -0.1, 0.1),
+	-- Attachments = {
+    -- {
+        -- PrintName = "Optic",
+        -- Pos = Vector(0, 0, 0),
+        -- Ang = Angle(0, 0, 0),
+        -- Icon_Offset = Vector(0, 0, 1.5),
+        -- Category = {"csgo_optic"},
+		-- Scale = 1
+    -- },
+    -- },
     -- }
 -- }
 
@@ -430,6 +430,27 @@ SWEP.AttachmentElements = {
     ["mag"] = {
         Bodygroups = {
             {1,1},
+        },
+    },
+    ["barrel_short"] = {
+        Bodygroups = {
+            {2,1},
+			{3,1},
+        },
+    },
+    ["muzzle"] = {
+        Bodygroups = {
+            {3,2},
+        },
+    },
+    ["stock_none"] = {
+        Bodygroups = {
+            {4,1},
+        },
+    },
+    ["stock_adapter"] = {
+        Bodygroups = {
+            {5,1},
         },
     },
 }
@@ -442,6 +463,17 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"csgo_rail_optic_ak",},
         CorrectiveAng = Angle(-0, 0, 0),
+		RejectAttachments = { 
+		["csgo_rail_optic_1"] = true,
+		},
+    },
+    {
+        PrintName = "Barrel",
+		DefaultAttName = "Standard",
+        Bone = "v_weapon.svd_Parent",
+        Pos = Vector(20, 0, 0.55),
+        Ang = Angle(0, 0, 0),
+        Category = "go_svd_barrel"
     },
     {
         PrintName = "Muzzle",
@@ -451,6 +483,7 @@ SWEP.Attachments = {
         Pos = Vector(35.7, 0, 0.55),
         Ang = Angle(0, 0, 0),
 		Scale = 1,
+		InstalledElements = {"muzzle"},
     },
     {
         PrintName = "Tactical",
@@ -470,6 +503,16 @@ SWEP.Attachments = {
 		Scale = 1,
     },
     {
+        PrintName = "Stock",
+        DefaultAttName = "Standard Stock",
+        Category = {"csgo_tube"},
+        Bone = "v_weapon.svd_Parent",
+        Pos = Vector(-2.3, 0, 0.6),
+        Ang = Angle(0, 0, 0),
+		InstalledElements = {"stock_adapter","stock_none"},
+		Scale = 0.8,
+    },
+    {
         PrintName = "Ammo",
         Bone = "v_weapon.svd_Clip",
         Category = "go_ammo",
@@ -478,7 +521,7 @@ SWEP.Attachments = {
     {
         PrintName = "Mag",
 		Bone = "v_weapon.svd_Clip",
-        Category = "go_mag",
+        Category = "go_svd_mag",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
@@ -499,25 +542,30 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/v_models/snip_svd_decal_b.mdl",
+        StickerModel = "models/weapons/stickers/snip_svd_decal_a.mdl",
         Category = "stickers",
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/v_models/snip_svd_decal_c.mdl",
+        StickerModel = "models/weapons/stickers/snip_svd_decal_b.mdl",
         Category = "stickers",
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/v_models/snip_svd_decal_d.mdl",
+        StickerModel = "models/weapons/stickers/snip_svd_decal_c.mdl",
+        Category = "stickers",
+    },
+    {
+        PrintName = "Stickers",
+        StickerModel = "models/weapons/stickers/snip_svd_decal_d.mdl",
         Category = "stickers",
     },
     {
         PrintName = "Charm",
         Category = "charm",
         Bone = "v_weapon.svd_Parent", -- relevant bone any attachments will be mostly referring to
-        Pos = Vector(0.71, -4.75, 5.6), -- offset that the attachment will be relative to the bone
-        Ang = Angle(90, 0, -90),
+        Pos = Vector(0, -0.8, 0), -- offset that the attachment will be relative to the bone
+        Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "View",
@@ -526,9 +574,9 @@ SWEP.Attachments = {
     {
         PrintName = "Stats",
         Category = "killcounter",
-        Bone = "v_weapon.stattrack",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, -90, 0),
+        Bone = "v_weapon.svd_Parent", -- relevant bone any attachments will be mostly referring to
+        Pos = Vector(1, -0.8, 0.7), -- offset that the attachment will be relative to the bone
+        Ang = Angle(0, 0, 15),
 		CosmeticOnly = true,
     },
     {

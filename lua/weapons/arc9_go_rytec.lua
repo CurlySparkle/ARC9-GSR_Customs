@@ -499,6 +499,8 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"csgo_optic",},
         CorrectiveAng = Angle(1.55, 0.6, 0),
+		Installed = "csgo_optic_acog",
+        Integral = "csgo_optic_acog",
     },
     {
         PrintName = "Muzzle",
