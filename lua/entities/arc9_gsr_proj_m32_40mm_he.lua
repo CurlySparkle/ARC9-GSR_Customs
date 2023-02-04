@@ -8,7 +8,7 @@ ENT.Spawnable 			= false
 ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 
 if CLIENT then
-    killicon.Add( "arc9_go_m32", "", Color( 255, 255, 255, 255 ) )
+    killicon.Add( "arc9_gsr_proj_m32_40mm_he", "", Color( 255, 255, 255, 255 ) )
 end
 
 ENT.Model = "models/weapons/csgo/m32_nade.mdl"
@@ -21,7 +21,7 @@ ENT.PhysMat = "grenade"
 ENT.SmokeTrail = true
 ENT.SmokeTrailMat = "effects/fas_smoke_beam"
 ENT.SmokeTrailSize = 2
-ENT.SmokeTrailTime = 1
+ENT.SmokeTrailTime = 0.5
 
 ENT.LifeTime = 20
 

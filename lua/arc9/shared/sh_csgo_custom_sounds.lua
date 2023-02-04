@@ -1,4 +1,16 @@
 sound.Add( {
+    name = "CSGO.Crossbow.Fire",
+    channel = 10,
+    volume = 1.0,
+    level = 120,
+    pitch = {90,110},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/crossbow/weap_crossbow_fire_01.wav",
+    }
+} )
+
+sound.Add( {
     name = "CSGO.SVD.Fire",
     channel = 10,
     volume = 1.0,
