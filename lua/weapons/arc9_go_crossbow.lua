@@ -12,7 +12,7 @@ SWEP.Class = "Grenade Launcher"
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/SlogoKolt/Arctic/TheOnly8Z/Matsilagi/CturiX",
-    Assets = "Counter-Strike: Global Offensive/COD: Modern Warfare 2019"
+    Assets = "Counter-Strike: Global Offensive/Call of Duty®: Modern Warfare"
 }
 
 SWEP.Description = [[Silent and agile, this high-performance crossbow fires 20.0" bolts with exceptional lethality. Exclusive customization, distinct functionality, and unique ammunition types put this weapon in a class of its own. Standard 20.0" bolts are recoverable, and are undetectable by trophy systems.]]

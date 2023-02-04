@@ -12,7 +12,7 @@ SWEP.Class = "Assault Rifle"
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/SlogoKolt/Arctic/TheOnly8Z/Matsilagi/CturiX",
-    Assets = "Counter-Strike: Global Offensive/COD: Modern Warfare 2019"
+    Assets = "Counter-Strike: Global Offensive/Call of Duty®: Modern Warfare"
 }
 
 SWEP.Description = [[Automatic assault rifle featuring a short stroke piston system that keeps the fire rate high and the recoil low.]]

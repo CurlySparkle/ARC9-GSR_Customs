@@ -12,7 +12,7 @@ SWEP.Class = "Submachine Gun"
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/SlogoKolt/Arctic/TheOnly8Z/Matsilagi/CturiX",
-    Assets = "Counter-Strike: Global Offensive/Insurgency: Sandstorm"
+    Assets = "Counter-Strike: Global Offensive/Call of Duty®: Modern Warfare"
 }
 
 SWEP.Description = [[Automatic assault rifle featuring a short stroke piston system that keeps the fire rate high and the recoil low.]]

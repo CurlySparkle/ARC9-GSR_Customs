@@ -12,7 +12,7 @@ SWEP.Class = "Submachine Gun"
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/SlogoKolt/Arctic/TheOnly8Z/Matsilagi/CturiX",
-    Assets = "Counter-Strike: Global Offensive/COD: Modern Warfare 2019"
+    Assets = "Counter-Strike: Global Offensive/Call of Duty®: Modern Warfare"
 }
 
 SWEP.Description = [[This semi-automatic Anti-Material Rifle is chambered in .50 BMG for dominant long range assaults. A 25x59mm high-explosive payload variant is officially listed as "experimental", but has been deployed on multiple classified missions with great effectiveness.]]
