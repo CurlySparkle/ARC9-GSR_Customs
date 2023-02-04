@@ -123,6 +123,12 @@ if SERVER then
         end
         self:EmitSound(("weapons/csgo/crossbow/imp_Arrow_Concrete_2ch_V3_0" .. math.random(1,4) .. ".wav"), 75, 100, 1, CHAN_AUTO)
         self.DetonateTime = CurTime() + 2
+		
+        -- if not self.Hit then
+            -- self.Hit = true
+            -- SafeRemoveEntityDelayed(self, 15)
+        -- end
+		
     end
 end
 

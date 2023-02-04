@@ -79,7 +79,7 @@ if SERVER then
         effectdata:SetOrigin( self:GetPos() )
         if self.Stuck then
             if self.DetonateTime < CurTime() then
-                util.BlastDamage(self, self:GetOwner(), self:GetPos(), 100, 150)
+                util.BlastDamage(self, self:GetOwner(), self:GetPos(), 128, 150)
                 EffectData():SetOrigin(self:GetPos())
                 EffectData():SetNormal(self:GetForward())
                 if self:WaterLevel() >= 1 then

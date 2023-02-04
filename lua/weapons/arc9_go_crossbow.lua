@@ -51,7 +51,7 @@ SWEP.Penetration = 10 -- Units of wood that can be penetrated by this gun.
 SWEP.ImpactForce = 15
 
 SWEP.ShootEnt = "arc9_gsr_proj_crossbow_default" -- Set to an entity to launch it out of this weapon.
-SWEP.ShootEntForce = 6000
+SWEP.ShootEntForce = 7000
 SWEP.ShootEntityData = {} -- Extra data that can be given to a projectile. Sets SENT.WeaponDataLink with this table.
 
 SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
@@ -317,12 +317,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.7,
+                t = 0.4,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 1.1,
+                t = 0.55,
                 lhik = 1,
                 rhik = 1
             },
@@ -354,7 +354,7 @@ SWEP.AttachmentTableOverrides = {
     ModelOffset = Vector(3, 0, 0),
     },
     ["go_grip_loading"] = {
-    ModelOffset = Vector(4, 0, 0),
+    ModelOffset = Vector(0, 0, 0),
     },
 }
 
@@ -387,7 +387,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optics",
         Bone = "tag_attachments",
-        Pos = Vector(4.5, 0, 2),
+        Pos = Vector(4.5, 0, 1.9),
         Ang = Angle(0, 0, 0),
         Category = {"csgo_optic",},
         CorrectiveAng = Angle(0, 0, 0),
@@ -406,7 +406,7 @@ SWEP.Attachments = {
         DefaultAttName = "Default",
         Category = {"grip"},
         Bone = "tag_attachments",
-        Pos = Vector(15, 0, -1.9),
+        Pos = Vector(15, 0, -1.85),
         Ang = Angle(0, 0, 180),
 		Scale = 1,
 		InstalledElements = {"grip"},
@@ -477,4 +477,4 @@ SWEP.Attachments = {
 }
 
 SWEP.GripPoseParam = 1
-SWEP.GripPoseParam2 = 0.5
+SWEP.GripPoseParam2 = 0.7
