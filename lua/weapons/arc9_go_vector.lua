@@ -15,7 +15,7 @@ SWEP.Credits = {
     Assets = "Counter-Strike: Global Offensive/Call of Duty®: Modern Warfare"
 }
 
-SWEP.Description = [[Automatic assault rifle featuring a short stroke piston system that keeps the fire rate high and the recoil low.]]
+SWEP.Description = [[Aggressive full auto submachine gun with buttery smooth recoil and a blazing fast rate of fire that is exceptional for strategic room clearing and holding down the front line.]]
 
 SWEP.ViewModel = "models/weapons/csgo/c_smg_vector.mdl"
 SWEP.WorldModel = "models/weapons/w_snip_awp.mdl"
