@@ -323,7 +323,7 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = path .. "scar20_draw.wav", t = 0 / 30},
-            {s = path .. "sg550_boltpull.wav", t = 14 / 30},
+            {s = path2 .. "sg550_boltpull.wav", t = 14 / 30},
         },
     },
     ["draw"] = {

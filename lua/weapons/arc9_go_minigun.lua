@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - GS:R: Customs"
 SWEP.SubCategory = "Specials"
 
-SWEP.PrintName = "Crossbow"
+SWEP.PrintName = "MGL-32"
 
 SWEP.Class = "Grenade Launcher"
 
@@ -15,9 +15,9 @@ SWEP.Credits = {
     Assets = "Counter-Strike: Global Offensive/Call of Duty®: Modern Warfare"
 }
 
-SWEP.Description = [[Silent and agile, this high-performance crossbow fires 20.0" bolts with exceptional lethality. Exclusive customization, distinct functionality, and unique ammunition types put this weapon in a class of its own. Standard 20.0" bolts are recoverable, and are undetectable by trophy systems.]]
+SWEP.Description = [[6 round semi-automatic grenade launcher.]]
 
-SWEP.ViewModel = "models/weapons/csgo/c_snip_crossbow.mdl"
+SWEP.ViewModel = "models/weapons/csgo/c_eq_minigun.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"
 SWEP.DefaultBodygroups = "00000000"
 
@@ -25,7 +25,7 @@ SWEP.Slot = 3
 
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
-SWEP.WorldModelMirror = "models/weapons/csgo/c_snip_crossbow.mdl"
+SWEP.WorldModelMirror = "models/weapons/csgo/c_eq_minigun.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-11, 6, -2.5),
     Ang = Angle(-17, 3, 180),
@@ -36,64 +36,59 @@ SWEP.WorldModelOffset = {
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 36 -- Damage done at point blank range
+SWEP.DamageMax = 26 -- Damage done at point blank range
 SWEP.DamageMin = 6 -- Damage done at maximum range
 
 SWEP.Num = 1
 
 SWEP.DamageRand = 0.1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
-SWEP.RangeMin = 1000
-SWEP.RangeMax = 6000
+SWEP.RangeMin = 2000 -- How far bullets retain their maximum damage for.
+SWEP.RangeMax = 8000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
 
-SWEP.Penetration = 10 -- Units of wood that can be penetrated by this gun.
-
+SWEP.Penetration = 15
 SWEP.ImpactForce = 15
 
-SWEP.ShootEnt = "arc9_gsr_proj_crossbow_default" -- Set to an entity to launch it out of this weapon.
-SWEP.ShootEntForce = 7000
-SWEP.ShootEntityData = {} -- Extra data that can be given to a projectile. Sets SENT.WeaponDataLink with this table.
-
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
-
-SWEP.ShootPosOffset = Vector(3, 15, -3)
-SWEP.ShootPosOffsetSights = Vector(0, 15, 0)
+SWEP.PhysBulletMuzzleVelocity = 1312 * 12
+SWEP.PhysBulletGravity = 1.5
+SWEP.PhysBulletDrag = 1.15
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "xbowbolt" -- what ammo type the gun uses
+SWEP.Ammo = "ar2" -- what ammo type the gun uses
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 1 -- Self-explanatory.
-SWEP.SupplyLimit = 24 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
-SWEP.SecondarySupplyLimit = 24 -- Amount of reserve UBGL magazines you can take.
+SWEP.ClipSize = 200 -- Self-explanatory.
+SWEP.SupplyLimit = 2 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
+SWEP.SecondarySupplyLimit = 10 -- Amount of reserve UBGL magazines you can take.
 
 SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
 SWEP.DrawCrosshair = true
 SWEP.Crosshair = true
-SWEP.LauncherCrosshair = false
-
-SWEP.NoFlash = true -- Disable light flash
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 400
+SWEP.RPM = 1750
 
 SWEP.Firemodes = {
     {
-        Mode = 1,
+        Mode = -1,
     },
 }
 
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 3
+SWEP.Recoil = 0.85
+
+SWEP.RecoilSeed = 65473
+
+SWEP.RecoilPatternDrift = 12
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 3 -- Multiplier for vertical recoil
+SWEP.RecoilUp = 1 -- Multiplier for vertical recoil
 
-SWEP.RecoilSide = 1 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 1.5 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
@@ -104,27 +99,31 @@ SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilDissipationRateSights = 50
 SWEP.RecoilResetTime = 0 -- How long the gun must go before the recoil pattern starts to reset.
 
-SWEP.RecoilAutoControl = 10 -- Multiplier for automatic recoil control.
+SWEP.RecoilAutoControl = 1 -- Multiplier for automatic recoil control.
 
-SWEP.RecoilKick = 1.5
+SWEP.RecoilKick = 1
 
 SWEP.RecoilMultCrouch = 0.8
 SWEP.RecoilMultHipFire = 1.25
 
+-------------------------- VISUAL RECOIL
+
+SWEP.UseVisualRecoil = true
+SWEP.VisualRecoilPunch = 1
+
 -------------------------- SPREAD
 
-SWEP.Spread = 0
-SWEP.SpreadAddRecoil = 0
+SWEP.Spread = 0.003
 
-SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = 0.03
---SWEP.SpreadAddMove = 0
-SWEP.SpreadAddMidAir = 0
+SWEP.SpreadAddShooting = 0.05 -- Applied per unit of recoil.
+
+SWEP.SpreadAddMove = 0.1
+SWEP.SpreadAddMidAir = 0.1
+SWEP.SpreadAddHipFire = 0.05
+SWEP.SpreadAddCrouch = -0.01
+SWEP.SpreadAddSights = -0.5
 
 -------------------------- HANDLING
-
-SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
-SWEP.Sway = 0 -- How much the gun sways.
 
 SWEP.AimDownSightsTime = 0.5 -- How long it takes to go from hip fire to aiming down sights.
 SWEP.SprintToFireTime = 0.5 -- How long it takes to go from sprinting to being able to fire.
@@ -134,7 +133,7 @@ SWEP.SprintToFireTime = 0.5 -- How long it takes to go from sprinting to being a
 SWEP.Bash = true
 SWEP.PrimaryBash = false
 SWEP.PreBashTime = 0.2
-SWEP.PostBashTime = 0.65
+SWEP.PostBashTime = 0.7
 
 -------------------------- TRACERS
 
@@ -144,12 +143,13 @@ SWEP.TracerColor = Color(255, 255, 155) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.15, -5, 0.95),
+    Pos = Vector(-4.1, -5, 0.9),
     Ang = Angle(0, 0, -1),
     Magnification = 1.1,
     ViewModelFOV = 56,
     CrosshairInSights = false
 }
+SWEP.HasSights = false
 
 SWEP.ViewModelFOVBase = 65
 
@@ -196,31 +196,62 @@ SWEP.AnimDraw = false
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "pb_ins2_muzzleflash_tracer"
---SWEP.AfterShotParticle = "barrel_smoke_plume"
---SWEP.AfterShotParticleDelay = -1
+SWEP.MuzzleParticle = "weapon_muzzle_flash_assaultrifle_comp"
+SWEP.AfterShotParticle = "barrel_smoke_plume"
+SWEP.AfterShotParticleDelay = -1
 SWEP.MuzzleEffectQCA = 1
 
 SWEP.CamQCA = 4
 SWEP.CamQCA_Mult = 1
 
-SWEP.NoShellEject = true
+SWEP.ShellModel = "models/models/weapons/shared/shell_762_hr.mdl"
+SWEP.ShellCorrectAng = Angle(0, 0, 0)
+SWEP.ShellScale = 0.1
+SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
+
+SWEP.TriggerDelay = 0.45 -- Set to > 0 to play the "trigger" animation before shooting. Delay time is based on this value.
+
+SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
+SWEP.TriggerDelayTime = 0.45 -- Time until weapon fires.
 
 -------------------------- SOUNDS
 
-local path = "weapons/csgo/crossbow/"
+local path = "weapons/csgo/minigun/"
 
-SWEP.ShootSound = "CSGO.Crossbow.Fire"
---SWEP.DistantShootSound = "CSGO.Nova.Fire.Distance"
-SWEP.DryFireSound = "weapons/csgo/svd/svd_empty.wav"
+SWEP.ShootSound = "CSGO.Minigun.Fire"
+SWEP.DistantShootSound = "CSGO.Minigun.Distance_Fire"
+SWEP.DryFireSound = "weapons/clipempty_rifle.wav"
+
+SWEP.BulletBones = {
+    [1] = "j_ammo_13",
+    [2] = "j_ammo_12",
+    [3] = "j_ammo_11",
+    [4] = "j_ammo_10",
+    [5] = "j_ammo_9",
+	[6] = "j_ammo_8",
+	[7] = "j_ammo_7",
+	[8] = "j_ammo_6",
+	[9] = "j_ammo_5",
+	[10] = "j_ammo_4",
+	[11] = "j_ammo_3",
+	[12] = "j_ammo_2",
+	[13] = "j_ammo_1",
+}
 
 SWEP.Animations = {
     ["fire"] = {
         Source = "shoot1",
+        EventTable = {
+            {s = path .. "weap_dblmg_spindown_plr_01.ogg", t = 4 / 30},
+        },
     },
-    -- ["fire_sights"] = {
-        -- Source = "shoot1_ads",
-    -- },
+    ["trigger"] = {
+        Source = {"windup"},
+		--MinProgress = 0.8,
+        EventTable = {
+            {s = path .. "weap_dblmg_spinup_plr_01.ogg", t = 0 / 30},
+        },
+    },
     ["reload"] = {
         Source = "reload",
 		MinProgress = 0.8,
@@ -247,44 +278,22 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_sn_crossbow_reload_rotate.wav", t = 4 / 30},
-			{s = path .. "wfoly_sn_crossbow_reload_pull_string.wav", t = 13 / 30},
-			{s = path .. "wfoly_sn_crossbow_reload_load_arrow.wav", t = 55 / 30},
-			{s = path .. "wfoly_sn_crossbow_reload_lock_arrow_01.wav", t = 65 / 30},
-			{s = path .. "wfoly_sn_crossbow_reload_lock_arrow_02.wav", t = 70 / 30},
-			{s = path .. "wfoly_sn_crossbow_reload_end.wav", t = 79 / 30},
-        },
-    },
-    ["ready"] = {
-        Source = {"draw"},
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 0,
-                rhik = 1
-            },
-            {
-                t = 1,
-                lhik = 1,
-                rhik = 1
-            },
-        },
-        EventTable = {
-            {s = path .. "wfoly_sn_crossbow_raise.wav", t = 0 / 30},
-            {s = path .. "wfoly_sn_crossbow_raise_first_safety_off.wav", t = 0 / 30},
-			{s = path .. "wfoly_sn_crossbow_raise_first_end.wav", t = 11 / 30},
+			{s = path .. "wfoly_plr_lm_minigun_reload_start.ogg", t = 5 / 30},
+			{s = path .. "wfoly_plr_lm_minigun_reload_belt_out.ogg", t = 45 / 30},
+			{s = path .. "wfoly_plr_lm_minigun_reload_belt_in.ogg", t = 107 / 30},
+			{s = path .. "wfoly_plr_lm_minigun_reload_end.ogg", t = 137 / 30},
         },
     },
     ["draw"] = {
-        Source = "draw_short",
+        Source = "draw",
         EventTable = {
-            {s = path .. "wfoly_sn_crossbow_raise.wav", t = 0 / 30},
+            {s = path .. "wfoly_lm_sierrax_raise.ogg", t = 0 / 30},
         },
     },
     ["holster"] = {
         Source = "holster",
         EventTable = {
-            {s = path .. "wfoly_sn_crossbow_raise.wav", t = 0 / 30},
+            {s = path .. "wfoly_lm_sierrax_raise.ogg", t = 0 / 30},
         },
     },
     ["idle"] = {
@@ -295,11 +304,11 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-		Mult = 2,
+		Mult = 3,
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-		Mult = 2,
+		Mult = 3,
     },
     ["inspect"] = {
         Source = "lookat01",
@@ -317,22 +326,20 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.4,
+                t = 0.7,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.55,
+                t = 1.1,
                 lhik = 1,
                 rhik = 1
             },
         },
         EventTable = {
-            { s = path .. "wfoly_sn_crossbow_inspect_01.wav", t = 2 / 30 },
-			{ s = path .. "wfoly_sn_crossbow_inspect_02.wav", t = 40 / 30 },
-			{ s = path .. "wfoly_sn_crossbow_inspect_03.wav", t = 71 / 30 },
-			{ s = path .. "wfoly_sn_crossbow_inspect_04.wav", t = 100 / 30 },
-			{ s = path .. "wfoly_sn_crossbow_inspect_05.wav", t = 127 / 30 },
+            { s = path .. "wfoly_lm_dblmg_inspect_01.ogg", t = 18 / 30 },
+			{ s = path .. "wfoly_lm_dblmg_inspect_02.ogg", t = 56 / 30 },
+			{ s = path .. "wfoly_lm_dblmg_inspect_03.ogg", t = 105 / 30 },
         },
     },
     ["bash"] = {
@@ -340,42 +347,16 @@ SWEP.Animations = {
     },
 }
 
-SWEP.Hook_Think	= ARC9.CSGO.BlendEmpty
+--SWEP.Hook_Think	= ARC9.CSGO.BlendCyl
 
 -------------------------- ATTACHMENTS
 
-SWEP.AttachmentTableOverrides = {
-    ["arc9_stat_proscreen_main"] = {
-    ModelOffset = Vector(5, -0.1, -1.6),
-	ModelAngleOffset = Angle(0, 0, 10),
-	Scale = 0.8,
-    },
-    ["go_grip_angled"] = {
-    ModelOffset = Vector(0.7, 0, 0),
-    },
-    ["go_grip_loading"] = {
-    ModelOffset = Vector(-0.6, 0, 0.1),
-    },
-}
-
 SWEP.AttachmentElements = {
-    ["sights"] = {
-        Bodygroups = {
-            {1,1},
-        },
-    },
-    ["grip"] = {
-        Bodygroups = {
-            {2,1},
-			{5,1},
-        },
-    },
-    ["bolt_rock"] = {
-        Bodygroups = {
-            {3,1},
-			{4,1},
-        },
-    },
+    -- ["stock_none"] = {
+        -- Bodygroups = {
+            -- {3,2},
+        -- },
+    -- },
 }
 
 -- SWEP.Hook_ModifyBodygroups = function(wep, data)
@@ -385,43 +366,27 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Optics",
-        Bone = "tag_attachments",
-        Pos = Vector(4.5, 0, 1.9),
-        Ang = Angle(0, 0, 0),
-        Category = {"csgo_optic",},
-        CorrectiveAng = Angle(0, 0, 0),
-		InstalledElements = {"sights"},
-    },
-    {
         PrintName = "Tactical",
         DefaultAttName = "Default",
         Category = "csgo_tac",
         Bone = "tag_attachments",
-        Pos = Vector(21.5, 0, -1),
-        Ang = Angle(0, 0, 0),
+        Pos = Vector(0, 3.2, 2.8),
+        Ang = Angle(-9.5, 0, -120),
     },
     {
         PrintName = "Grips",
         DefaultAttName = "Default",
         Category = {"grip"},
         Bone = "tag_attachments",
-        Pos = Vector(15, 0, -1.85),
-        Ang = Angle(0, 0, 180),
+        Pos = Vector(0, -4, 2),
+        Ang = Angle(35, 5, -110),
 		Scale = 1,
-		InstalledElements = {"grip"},
 		RejectAttachments = { 
 		["go_ubgl_m203"] = true,
 		["go_ubgl_mass26"] = true,
 		["go_ubgl_xm1014"] = true,
+		["go_grip_angled"] = true,
 		},
-    },
-    {
-        PrintName = "Ammo",
-        Bone = "j_mag1",
-        Category = {"go_ammo_crossbow"},
-        Pos = Vector(0, -1.5, -1.5),
-        Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Perk",
@@ -429,8 +394,8 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Skins",
-        --Bone = "v_weapon.Clip",
-        Category = "go_skins_crossbow",
+        --Bone = "Clip",
+        Category = "go_skins_minigun",
 		CosmeticOnly = true,
     },
     {
@@ -440,41 +405,36 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/eq_crossbow_decal_a.mdl",
+        StickerModel = "models/weapons/stickers/eq_minigun_decal_a.mdl",
         Category = "stickers",
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/eq_crossbow_decal_b.mdl",
+        StickerModel = "models/weapons/stickers/eq_minigun_decal_b.mdl",
         Category = "stickers",
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/eq_crossbow_decal_c.mdl",
-        Category = "stickers",
-    },
-    {
-        PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/eq_crossbow_decal_d.mdl",
+        StickerModel = "models/weapons/stickers/eq_minigun_decal_c.mdl",
         Category = "stickers",
     },
     {
         PrintName = "Charm",
         Category = "charm",
         Bone = "tag_attachments",
-        Pos = Vector(6, -0.7, -1.5),
+        Pos = Vector(-4.7, -0.5, 3),
         Ang = Angle(0, 0, 0),
-		Scale = 1.5,
+		Scale = 2,
     },
     {
         PrintName = "Stats",
         Category = {"killcounter","killcounter2"},
         Bone = "tag_attachments",
-        Pos = Vector(2.5, -0.3, 1.4),
-        Ang = Angle(0, 0, 5),
+        Pos = Vector(-2.5, 0.5, 2.4),
+        Ang = Angle(0, 0, 120),
 		CosmeticOnly = true,
     },
 }
 
-SWEP.GripPoseParam = 4.5
-SWEP.GripPoseParam2 = 0.4
+SWEP.GripPoseParam = 3
+SWEP.GripPoseParam2 = 0.25

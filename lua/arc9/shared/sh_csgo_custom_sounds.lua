@@ -1,4 +1,37 @@
 sound.Add( {
+    name = "CSGO.Minigun.Fire",
+    channel = 10,
+    volume = 1,
+    level = 120,
+    pitch = {95,105},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/minigun/weap_lmg_fire_layer_plr_01.ogg",
+		"weapons/csgo/minigun/weap_lmg_fire_layer_plr_02.ogg",
+		"weapons/csgo/minigun/weap_lmg_fire_layer_plr_03.ogg",
+		"weapons/csgo/minigun/weap_lmg_fire_layer_plr_04.ogg",
+		"weapons/csgo/minigun/weap_lmg_fire_layer_plr_05.ogg",
+		"weapons/csgo/minigun/weap_lmg_fire_layer_plr_06.ogg",
+    }
+} )
+
+sound.Add( {
+    name = "CSGO.Minigun.Distance_Fire",
+    channel = CHAN_WEAPON,
+    volume = 0.3,
+    level = 120,
+    pitch = {97,103},
+    sound = {
+        "weapons/csgo/minigun/weap_kilo121_fire_plr_01.ogg",
+		"weapons/csgo/minigun/weap_kilo121_fire_plr_02.ogg",
+		"weapons/csgo/minigun/weap_kilo121_fire_plr_03.ogg",
+		"weapons/csgo/minigun/weap_kilo121_fire_plr_04.ogg",
+		"weapons/csgo/minigun/weap_kilo121_fire_plr_05.ogg",
+		"weapons/csgo/minigun/weap_kilo121_fire_plr_06.ogg",
+    }
+} )
+
+sound.Add( {
     name = "CSGO.Crossbow.Fire",
     channel = 10,
     volume = 1.0,
