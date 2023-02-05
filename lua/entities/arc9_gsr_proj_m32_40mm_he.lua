@@ -94,7 +94,7 @@ local bloodmat = {
 function ENT:Detonate(impact)
     if not self:IsValid() then return end
     if self.Defused then return end
-	local shake = ents.Create("env_shake")
+    local shake = ents.Create("env_shake")
     if self:WaterLevel() > 0 then
         local tr = util.TraceLine({
             start = self:GetPos(),
@@ -120,18 +120,18 @@ function ENT:Detonate(impact)
             ParticleEffect("explosion_hegrenade_brief", self:GetPos(), (-self.LastHitNormal):Angle(), nil)
             ParticleEffect("explosion_hegrenade_interior", self:GetPos(), (-self.LastHitNormal):Angle(), nil)
             ParticleEffect("weapon_decoy_ground_effect_shot", self:GetPos(), (-self.LastHitNormal):Angle(), nil)
-			ParticleEffect("smoke_plume", self:GetPos(), (-self.LastHitNormal):Angle(), nil)
-            ParticleEffect("smoke_plume_b", self:GetPos(), (-self.LastHitNormal):Angle(), nil)
+            ParticleEffect("smoke_plume", self:GetPos(), (-self.LastHitNormal):Angle(), nil)
+            --ParticleEffect("smoke_plume_b", self:GetPos(), (-self.LastHitNormal):Angle(), nil)
             ParticleEffect("smoke_plume_c", self:GetPos(), (-self.LastHitNormal):Angle(), nil)
-			ParticleEffect("grenade_explosion_01", self:GetPos(), (-self.LastHitNormal):Angle(), nil)
+            ParticleEffect("grenade_explosion_01", self:GetPos(), (-self.LastHitNormal):Angle(), nil)
         end
 
         // Overpressure radius
         util.BlastDamage(self, IsValid(self:GetOwner()) and self:GetOwner() or self, self:GetPos(), 100, 200)
         // Shrapnel radius
         util.BlastDamage(self, IsValid(self:GetOwner()) and self:GetOwner() or self, self:GetPos(), 312, 50)
-		
-		self:EmitSound("CSGO.Frag.Explode")
+
+        self:EmitSound("CSGO.Frag.Explode")
     end
 
     if SERVER then
