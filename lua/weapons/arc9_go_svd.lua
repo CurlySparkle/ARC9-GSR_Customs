@@ -23,7 +23,7 @@ SWEP.Credits = {
     Assets = "Counter-Strike: Global Offensive/Insurgency: Sandstorm/Call of Duty®: Modern Warfare"
 }
 
-SWEP.Description = [[The WSVD (Russian: Снайперская Винтовка Драгунова, Snayperskaya Vintovka Dragunova; English: Dragunov Sniper Rifle) is a Soviet semi-automatic sniper rifle chambered in 7.62×54mmR, designed as a squad support weapon. Upon introduction, it had beat out all other contestants and was accepted into service with the Soviet military with serial production beginning in 1964.]]
+SWEP.Description = [[A Soviet semi-automatic sniper rifle chambered in 7.62×54mmR, designed as a squad support weapon. Upon introduction, it had beat out all other contestants and was accepted into service with the Soviet military with serial production beginning in 1964.]]
 
 SWEP.ViewModel = "models/weapons/csgo/c_snip_svd.mdl"
 SWEP.WorldModel = "models/weapons/w_snip_g3sg1.mdl"

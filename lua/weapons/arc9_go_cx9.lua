@@ -15,7 +15,7 @@ SWEP.Credits = {
     Assets = "Counter-Strike: Global Offensive/Call of Duty®: Modern Warfare"
 }
 
-SWEP.Description = [[This semi-automatic Anti-Material Rifle is chambered in .50 BMG for dominant long range assaults. A 25x59mm high-explosive payload variant is officially listed as "experimental", but has been deployed on multiple classified missions with great effectiveness.]]
+SWEP.Description = [[Comes with excellent maneuverability and a fast fire rate make this a formidable weapon in close-quarters engagements, manufactured by FORGE TAC.]]
 
 SWEP.ViewModel = "models/weapons/csgo/c_smg_evo.mdl"
 SWEP.WorldModel = "models/weapons/w_snip_awp.mdl"

@@ -23,7 +23,7 @@ SWEP.Credits = {
     Assets = "Counter-Strike: Global Offensive/Insurgency: Sandstorm"
 }
 
-SWEP.Description = [[The WVHS (Croatian: Višenamjenska Hrvatska Strojnica—"multifunctional Croatian machine gun") is a 5.56×45mm NATO bullpup assault rifle designed and manufactured by HS Produkt of Croatia. ]]
+SWEP.Description = [[A 5.56×45mm NATO bullpup assault rifle designed and manufactured by HS Produkt of Croatia. ]]
 
 
 SWEP.ViewModel = "models/weapons/csgo/c_rif_vhs.mdl"

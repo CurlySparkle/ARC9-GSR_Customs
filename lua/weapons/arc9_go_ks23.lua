@@ -24,7 +24,7 @@ SWEP.Credits = {
     Assets = "Counter-Strike: Global Offensive/Insurgency: Sandstorm"
 }
 
-SWEP.Description = [[The KS-23 is a Soviet shotgun, although because it uses a rifled barrel it is officially designated by the Russian military as a carbine. KS stands for Karabin Spetsialniy, "Special Carbine".]]
+SWEP.Description = [[A Soviet shotgun which uses a rifled barrel and officially designated by the Russian military as a carbine. KS stands for Karabin Spetsialniy, "Special Carbine".]]
 
 SWEP.ViewModel = "models/weapons/csgo/c_shot_ks23.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"

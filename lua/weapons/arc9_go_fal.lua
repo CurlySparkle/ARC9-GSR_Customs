@@ -24,7 +24,7 @@ SWEP.Credits = {
     Assets = "Counter-Strike: Global Offensive/Insurgency: Sandstorm"
 }
 
-SWEP.Description = [[The FN FAL is designed as a long-range weapon with the opportunity to be used in closer range engagements. The full power rifle cartridge doesn't lack stopping power, but the high recoil present when firing the FAL full-auto encourages its use in semi-automatic fire mode.]]
+SWEP.Description = [[Designed as a long-range weapon with the opportunity to be used in closer range engagements. The full power rifle cartridge doesn't lack stopping power, but the high recoil present when firing the FAL full-auto encourages its use in semi-automatic fire mode.]]
 
 SWEP.ViewModel = "models/weapons/csgo/c_rif_fal.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"

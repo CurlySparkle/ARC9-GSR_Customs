@@ -8,7 +8,7 @@ SWEP.SubCategory = "Specials"
 
 SWEP.PrintName = "Crossbow"
 
-SWEP.Class = "Grenade Launcher"
+SWEP.Class = "Marksman Rifle"
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/SlogoKolt/Arctic/TheOnly8Z/Matsilagi/CturiX",
@@ -351,10 +351,10 @@ SWEP.AttachmentTableOverrides = {
 	Scale = 0.8,
     },
     ["go_grip_angled"] = {
-    ModelOffset = Vector(3, 0, 0),
+    ModelOffset = Vector(0.7, 0, 0),
     },
     ["go_grip_loading"] = {
-    ModelOffset = Vector(0, 0, 0),
+    ModelOffset = Vector(-0.6, 0, 0.1),
     },
 }
 
@@ -476,5 +476,5 @@ SWEP.Attachments = {
     },
 }
 
-SWEP.GripPoseParam = 1
-SWEP.GripPoseParam2 = 0.7
+SWEP.GripPoseParam = 4.5
+SWEP.GripPoseParam2 = 0.4
