@@ -24,7 +24,7 @@ SWEP.Credits = {
     Assets = "Counter-Strike: Global Offensive/Insurgency: Sandstorm"
 }
 
-SWEP.Description = [[The Kel-Tec KSG is a bullpup 12-gauge pump-action shotgun designed by Kel-Tec. It has two tube magazines which the user of the gun can switch between manually. Each tube holds up to seven shells.]]
+SWEP.Description = [[Bullpup 12-gauge pump-action shotgun designed by Kel-Tec. It has two tube magazines which the user of the gun can switch between manually an each tube holds up to seven shells.]]
 
 SWEP.ViewModel = "models/weapons/csgo/c_shot_ksg.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"

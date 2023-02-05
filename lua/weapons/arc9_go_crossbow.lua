@@ -8,7 +8,7 @@ SWEP.SubCategory = "Specials"
 
 SWEP.PrintName = "Crossbow"
 
-SWEP.Class = "Grenade Launcher"
+SWEP.Class = "Marksman Rifle"
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/SlogoKolt/Arctic/TheOnly8Z/Matsilagi/CturiX",

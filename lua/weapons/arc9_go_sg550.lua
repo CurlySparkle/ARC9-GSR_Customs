@@ -15,7 +15,7 @@ SWEP.Credits = {
     Assets = "Counter-Strike: Source"
 }
 
-SWEP.Description = [[The SG550 is a semi-automatic sniper rifle that trades a high rate of fire and powerful long-distance damage for sluggish movement speed and big price tag.]]
+SWEP.Description = [[Semi-automatic sniper rifle that trades a high rate of fire and powerful long-distance damage for sluggish movement speed and big price tag.]]
 
 SWEP.ViewModel = "models/weapons/csgo/c_snip_sg550.mdl"
 SWEP.WorldModel = "models/weapons/w_snip_g3sg1.mdl"

@@ -6,16 +6,16 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - GS:R: Customs"
 SWEP.SubCategory = "Specials"
 
-SWEP.PrintName = "MGL-32"
+SWEP.PrintName = "Minigun"
 
-SWEP.Class = "Grenade Launcher"
+SWEP.Class = "Machine Guns"
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/SlogoKolt/Arctic/TheOnly8Z/Matsilagi/CturiX",
     Assets = "Counter-Strike: Global Offensive/Call of Duty®: Modern Warfare"
 }
 
-SWEP.Description = [[6 round semi-automatic grenade launcher.]]
+SWEP.Description = [[A machine gun that appears in a portable form with high rate of fire around 3,000 RPM, manufactured by FSS.]]
 
 SWEP.ViewModel = "models/weapons/csgo/c_eq_minigun.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"

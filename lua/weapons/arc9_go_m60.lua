@@ -24,7 +24,7 @@ SWEP.Credits = {
     Assets = "Counter-Strike: Global Offensive/Insurgency: Sandstorm"
 }
 
-SWEP.Description = [[The M60, officially the Machine Gun, Caliber 7.62 mm, M60, is a family of American general-purpose machine guns firing 7.62×51mm NATO cartridges from a disintegrating belt of M13 links. There are several types of ammunition approved for use in the M60, including ball, tracer, and armor-piercing rounds.]]
+SWEP.Description = [[A family of American general-purpose machine guns firing 7.62×51mm NATO cartridges from a disintegrating belt of M13 links. There are several types of ammunition approved for use in the M60, including ball, tracer, and armor-piercing rounds.]]
 
 
 SWEP.ViewModel = "models/weapons/csgo/c_mach_m60.mdl"

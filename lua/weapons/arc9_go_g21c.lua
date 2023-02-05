@@ -24,7 +24,7 @@ SWEP.Credits = {
     Assets = "Counter-Strike: Global Offensive/Insurgency: Sandstorm"
 }
 
-SWEP.Description = [[A compact submachine gun with designs that appear to facilitate an alternative firing mechanism, manufactured by TS Industries.]]
+SWEP.Description = [[Compact submachine gun with designs that appear to facilitate an alternative firing mechanism, manufactured by TS Industries.]]
 
 SWEP.ViewModel = "models/weapons/csgo/c_smg_g21c.mdl"
 SWEP.WorldModel = "models/weapons/w_smg_tmp.mdl"

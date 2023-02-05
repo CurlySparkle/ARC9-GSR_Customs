@@ -15,7 +15,7 @@ SWEP.Credits = {
     Assets = "Counter-Strike: Global Offensive/Call of Duty®: Modern Warfare"
 }
 
-SWEP.Description = [[6 round semi-automatic grenade launcher.]]
+SWEP.Description = [[6 round semi-automatic high-explosive grenade launcher.]]
 
 SWEP.ViewModel = "models/weapons/csgo/c_eq_m32.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"

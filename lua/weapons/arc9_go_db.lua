@@ -24,7 +24,7 @@ SWEP.Credits = {
     Assets = "Counter-Strike: Global Offensive/Insurgency: Sandstorm/Serious Sam 4"
 }
 
-SWEP.Description = [[A break-action shotgun with two parallel barrels, allowing two single shots to be fired in quick succession. Effective at close range.]]
+SWEP.Description = [[Break-action shotgun with two parallel barrels, allowing two single shots to be fired in quick succession. Effective at close range.]]
 
 SWEP.ViewModel = "models/weapons/csgo/c_shot_db.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"
