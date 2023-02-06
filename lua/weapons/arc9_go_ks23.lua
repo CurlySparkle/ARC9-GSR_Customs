@@ -131,7 +131,7 @@ SWEP.VisualRecoilPunch = 1
 
 SWEP.Spread = 0.035
 
-SWEP.SpreadAddRecoil = 0.02 -- Applied per unit of recoil.
+SWEP.SpreadAddShooting = 0.02 -- Applied per unit of recoil.
 
 SWEP.SpreadAddMove = 0.03
 SWEP.SpreadAddMidAir = 0.03

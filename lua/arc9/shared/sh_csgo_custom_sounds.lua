@@ -1,4 +1,36 @@
 sound.Add( {
+    name = "CSGO.Fal.Fire",
+    channel = 10,
+    volume = 1.0,
+    level = 120,
+    pitch = {90,110},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/fal/weap_falima_fire_plr_01.ogg",
+		"weapons/csgo/fal/weap_falima_fire_plr_02.ogg",
+		"weapons/csgo/fal/weap_falima_fire_plr_03.ogg",
+		"weapons/csgo/fal/weap_falima_fire_plr_04.ogg",
+    }
+} )
+
+sound.Add( {
+    name = "CSGO.Fal.Silenced_Fire",
+    channel = 10,
+    volume = 1.0,
+    level = 120,
+    pitch = {95,105},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/fal/weap_falima_fire_silenced_plr_01.ogg",
+		"weapons/csgo/fal/weap_falima_fire_silenced_plr_02.ogg",
+		"weapons/csgo/fal/weap_falima_fire_silenced_plr_03.ogg",
+		"weapons/csgo/fal/weap_falima_fire_silenced_plr_04.ogg",
+		"weapons/csgo/fal/weap_falima_fire_silenced_plr_05.ogg",
+		"weapons/csgo/fal/weap_falima_fire_silenced_plr_06.ogg",
+    }
+} )
+
+sound.Add( {
     name = "CSGO.Minigun.Fire",
     channel = 10,
     volume = 1,

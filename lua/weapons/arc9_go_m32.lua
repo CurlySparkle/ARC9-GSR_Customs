@@ -111,7 +111,7 @@ SWEP.RecoilMultHipFire = 1.25
 -------------------------- SPREAD
 
 SWEP.Spread = 0.008
-SWEP.SpreadAddRecoil = 0
+SWEP.SpreadAddShooting = 0
 
 SWEP.SpreadMultSights = 0.1
 SWEP.SpreadAddHipFire = 0.05

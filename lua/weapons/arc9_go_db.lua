@@ -129,7 +129,7 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 SWEP.Spread = 0.05
 
-SWEP.SpreadAddRecoil = 0.02 -- Applied per unit of recoil.
+SWEP.SpreadAddShooting = 0.02 -- Applied per unit of recoil.
 
 SWEP.SpreadAddSights = 0
 SWEP.SpreadAddMove = 0.025

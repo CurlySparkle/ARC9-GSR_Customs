@@ -95,6 +95,10 @@ SWEP.Firemodes = {
 -- General recoil multiplier
 SWEP.Recoil = 1.5
 
+SWEP.RecoilSeed = 6589132
+
+SWEP.RecoilPatternDrift = 25
+
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 0.7 -- Multiplier for vertical recoil
 SWEP.RecoilSide = 1 -- Multiplier for vertical recoil
@@ -121,12 +125,13 @@ SWEP.RecoilMultSights = 0.9
 
 SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilPunch = 0.8
+SWEP.VisualRecoilUp = 1
 
 -------------------------- SPREAD
 
 SWEP.Spread = 0.002
 
-SWEP.SpreadAddRecoil = 0.02 -- Applied per unit of recoil.
+SWEP.SpreadAddShooting = 0.02 -- Applied per unit of recoil.
 
 SWEP.SpreadAddMove = 0.1
 SWEP.SpreadAddMidAir = 0.1
