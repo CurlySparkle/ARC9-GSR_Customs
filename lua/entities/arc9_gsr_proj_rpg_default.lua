@@ -11,7 +11,8 @@ AddCSLuaFile()
 
 ENT.Model = "models/weapons/csgo/mags/w_eq_rpg_rocket.mdl"
 ENT.Ticks = 0
-ENT.FuseTime = 5
+ENT.FuseTime = 0.03
+ENT.Defused = false
 
 if SERVER then
 
@@ -24,9 +25,9 @@ function ENT:Initialize()
         phys:Wake()
         phys:EnableGravity(false)
     end
-
+	
     self.SpawnTime = CurTime()
-    self.motorsound = CreateSound( self, "weapons/csgo/rpg/move_rpapa7_proj_flame_cls.wav")
+    self.motorsound = CreateSound( self, "weapons/csgo/rpg/move_rpapa7_proj_flame_cls.ogg")
     self.motorsound:Play()
 
     timer.Simple(0.1, function()
@@ -36,26 +37,14 @@ function ENT:Initialize()
 end
 
 function ENT:Think()
-    if SERVER and CurTime() - self.SpawnTime >= self.FuseTime then
-        self:Detonate()
+    if SERVER and self.Defused and CurTime() - self.Defused_When >= self.Defused_RemoveIn then
+        self:Remove()
     end
 end
 
-function ENT:OnRemove()
-    self.motorsound:Stop()
-end
-
-end
+else
 
 function ENT:Think()
-    if SERVER then
-        local phys = self:GetPhysicsObject()
-        phys:ApplyForceCenter( self:GetAngles():Forward() * 500 )
-
-        if self.SpawnTime + self.FuseTime <= CurTime() then
-            self:Detonate()
-        end
-    else
         if self.Ticks % 5 == 0 then
             local emitter = ParticleEmitter(self:GetPos())
 
@@ -85,18 +74,19 @@ end
 
 function ENT:Detonate()
     if !self:IsValid() then return end
+    if self.Defused then return end
     local effectdata = EffectData()
         effectdata:SetOrigin( self:GetPos() )
 
     if self:WaterLevel() >= 1 then
         util.Effect( "WaterSurfaceExplosion", effectdata )
-        self:EmitSound("weapons/underwater_explode3.wav", 125, 100, 1, CHAN_AUTO)
+        --self:EmitSound("weapons/underwater_explode3.wav", 125, 100, 1, CHAN_AUTO)
     else
         ParticleEffect("smoke_plume", self:GetPos(), Angle(0, 0, 0), nil)
 		ParticleEffect("grenade_explosion_01", self:GetPos(), Angle(0, 0, 0), nil)
 		ParticleEffect("weapon_decoy_ground_effect_shot", self:GetPos(), Angle(0, 0, 0), nil)
         util.Effect( "Explosion", effectdata)
-        self:EmitSound("phx/kaboom.wav", 125, 100, 1, CHAN_AUTO)
+        --self:EmitSound("phx/kaboom.wav", 125, 100, 1, CHAN_AUTO)
     end
 
     local attacker = self
@@ -105,7 +95,7 @@ function ENT:Detonate()
         attacker = self.Owner
     end
 
-    util.BlastDamage(self, attacker, self:GetPos(), 256, 300)
+    util.BlastDamage(self, attacker, self:GetPos(), 256, 150)
 
     self:FireBullets({
         Attacker = attacker,
@@ -122,13 +112,67 @@ function ENT:Detonate()
     self:Remove()
 end
 
-function ENT:PhysicsCollide(colData, collider)
-    self:Detonate()
+-- function ENT:PhysicsCollide(colData, collider)
+	-- if CurTime() - self.SpawnTime >= self.FuseTime then
+		-- self:Detonate()
+	-- else
+		-- self:Defuse()
+	-- end
+-- end
+
+function ENT:PhysicsCollide(data, colData)
+    if SERVER then
+		if CurTime() - self.SpawnTime >= self.FuseTime then
+		self:Detonate()
+	else
+		self:Defuse()
+	end
+        if data.Speed > 75 then
+            self:EmitSound(Sound("physics/metal/weapon_impact_hard" .. math.random(1,3) .. ".wav"))
+
+            local tgt = data.HitEntity
+            if IsValid(tgt) and not tgt:IsWorld() and (self.NextHit or 0) < CurTime() then
+                self.NextHit = CurTime() + 0.1
+                local dmginfo = DamageInfo()
+                dmginfo:SetDamageType(DMG_GENERIC)
+                dmginfo:SetDamage(55)
+                dmginfo:SetAttacker(self:GetOwner())
+                dmginfo:SetInflictor(self)
+                dmginfo:SetDamageForce(data.OurOldVelocity * 0.5)
+                tgt:TakeDamageInfo(dmginfo)
+                if (IsValid(tgt) and (tgt:IsNPC() or tgt:IsPlayer() or tgt:IsNextBot()) and tgt:Health() <= 0) or (not tgt:IsWorld() and not IsValid(tgt)) or string.find(tgt:GetClass(), "breakable") then
+                    local pos, ang, vel = self:GetPos(), self:GetAngles(), data.OurOldVelocity
+                    timer.Simple(0, function()
+                        if IsValid(self) then
+                            self:SetAngles(ang)
+                            self:SetPos(pos)
+                            self:GetPhysicsObject():SetVelocityInstantaneous(vel)
+                        end
+                    end)
+                end
+            end
+        elseif data.Speed > 25 then
+            self:EmitSound(Sound("physics/metal/weapon_impact_soft" .. math.random(1,3) .. ".wav"))
+        end
+
+    end
+end
+
+function ENT:Defuse()
+    local phys = self:GetPhysicsObject()
+
+	self.Defused = true
+	self.Defused_RemoveIn = 5
+	self.Defused_When = CurTime()
+
+
+    if phys:IsValid() then
+        phys:Wake()
+        phys:EnableGravity(true)
+    end
+	--self:Remove()
 end
 
 function ENT:Draw()
-    cam.Start3D() -- Start the 3D function so we can draw onto the screen.
-        render.SetMaterial( Material("effects/blueflare1") ) -- Tell render what material we want, in this case the flash from the gravgun
-        render.DrawSprite( self:GetPos(), math.random(100, 200), math.random(100, 200), Color(255, 225, 175) ) -- Draw the sprite in the middle of the map, at 16x16 in it's original colour with full alpha.
-    cam.End3D()
+    self:DrawModel()
 end
