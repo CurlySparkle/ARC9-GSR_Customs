@@ -9,7 +9,7 @@ SWEP.SubCategory = "Assault Rifles"
 SWEP.PrintName = "FAL"
 SWEP.TrueName = "FN-FAL"
 
-SWEP.Class = "Battle Rifle"
+SWEP.Class = "Assault Rifle"
 SWEP.Trivia = {
     ["Country of Origin"] = "United States of America",
     ["Caliber"] = "7.62x51mm NATO",
@@ -20,7 +20,7 @@ SWEP.Trivia = {
 }
 
 SWEP.Credits = {
-    Author = "Twilight Sparkle/Inter/arby26",
+    Author = "Twilight Sparkle",
     Assets = "Counter-Strike: Global Offensive/Call of Duty®: Modern Warfare"
 }
 

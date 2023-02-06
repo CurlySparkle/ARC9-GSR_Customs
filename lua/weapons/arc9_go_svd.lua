@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - GS:R: Customs"
 SWEP.SubCategory = "Sniper Rifles"
 
-SWEP.PrintName = "SVD"
+SWEP.PrintName = "Dragunov"
 
 SWEP.Class = "Sniper Rifle"
 SWEP.Trivia = {
