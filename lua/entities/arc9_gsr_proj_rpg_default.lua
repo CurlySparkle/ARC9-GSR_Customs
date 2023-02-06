@@ -9,6 +9,10 @@ ENT.Spawnable 			= false
 
 AddCSLuaFile()
 
+if CLIENT then
+    killicon.Add( "arc9_gsr_proj_rpg_default2", "hud/killicons/default", Color( 255, 255, 255, 255 ) )
+end
+
 ENT.Model = "models/weapons/csgo/mags/w_eq_rpg_rocket.mdl"
 ENT.Ticks = 0
 ENT.FuseTime = 0.03

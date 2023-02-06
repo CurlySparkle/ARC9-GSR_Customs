@@ -9,7 +9,7 @@ ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 ENT.CanPickup = true
 
 if CLIENT then
-    killicon.Add("arc9_gsr_proj_crossbow_default", "", Color(255, 255, 255, 255))
+    killicon.Add( "arc9_gsr_proj_crossbow_default", "hud/killicons/default", Color( 255, 255, 255, 255 ) )
 end
 
 if SERVER then

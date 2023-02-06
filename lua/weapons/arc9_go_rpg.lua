@@ -48,13 +48,13 @@ SWEP.Penetration = 0 -- Units of wood that can be penetrated by this gun.
 
 SWEP.ImpactForce = 15
 
-SWEP.ShootEnt = "arc9_gsr_proj_rpg_default" -- Set to an entity to launch it out of this weapon.
+SWEP.ShootEnt = "arc9_gsr_proj_rpg_default2" -- Set to an entity to launch it out of this weapon.
 SWEP.ShootEntForce = 4000
 SWEP.ShootEntityData = {} -- Extra data that can be given to a projectile. Sets SENT.WeaponDataLink with this table.
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+--SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
 
-SWEP.ShootPosOffset = Vector(3, 20, -3)
+SWEP.ShootPosOffset = Vector(5, 20, -5)
 SWEP.ShootPosOffsetSights = Vector(0, 20, 0)
 
 SWEP.PushBackForce = 5
@@ -65,8 +65,8 @@ SWEP.Ammo = "RPG_Round" -- what ammo type the gun uses
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 1 -- Self-explanatory.
-SWEP.SupplyLimit = 10 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
-SWEP.SecondarySupplyLimit = 10 -- Amount of reserve UBGL magazines you can take.
+SWEP.SupplyLimit = 12 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
+SWEP.SecondarySupplyLimit = 12 -- Amount of reserve UBGL magazines you can take.
 
 SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
 SWEP.DrawCrosshair = true
@@ -186,7 +186,7 @@ SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizePos = Vector(17, 35, 3)
 SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeNoRotate = false
-SWEP.CustomizeSnapshotPos = Vector(0, 7, 3)
+SWEP.CustomizeSnapshotPos = Vector(-5, 25, 3)
 
 -------------------------- HoldTypes
 

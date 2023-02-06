@@ -8,7 +8,7 @@ ENT.Spawnable 			= false
 ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 
 if CLIENT then
-    killicon.Add( "arc9_gsr_proj_m32_40mm_he", "", Color( 255, 255, 255, 255 ) )
+    killicon.Add( "arc9_gsr_proj_m32_40mm_he", "hud/killicons/default", Color( 255, 255, 255, 255 ) )
 end
 
 ENT.Model = "models/weapons/csgo/m32_nade.mdl"

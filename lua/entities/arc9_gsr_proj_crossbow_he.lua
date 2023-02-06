@@ -9,7 +9,7 @@ ENT.CanPickup = false
 ENT.Model = "models/weapons/csgo/mags/w_eq_crossbow_bolt.mdl"
 
 if CLIENT then
-    killicon.Add( "arc9_gsr_proj_crossbow_he", "", Color( 255, 255, 255, 255 ) )
+    killicon.Add( "arc9_gsr_proj_crossbow_he", "hud/killicons/default", Color( 255, 255, 255, 255 ) )
 end
 
 if SERVER then
