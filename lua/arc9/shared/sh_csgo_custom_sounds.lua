@@ -1,4 +1,19 @@
 sound.Add( {
+    name = "CSGO.RPG.Fire",
+    channel = 10,
+    volume = 1.0,
+    level = 120,
+    pitch = {90,110},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/rpg/weap_rpapa7_fire_plr_01.ogg",
+		"weapons/csgo/rpg/weap_rpapa7_fire_plr_02.ogg",
+		"weapons/csgo/rpg/weap_rpapa7_fire_plr_03.ogg",
+		"weapons/csgo/rpg/weap_rpapa7_fire_plr_04.ogg",
+    }
+} )
+
+sound.Add( {
     name = "CSGO.Fal.Fire",
     channel = 10,
     volume = 1.0,
