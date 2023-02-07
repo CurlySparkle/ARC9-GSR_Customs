@@ -27,9 +27,9 @@ SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelMirror = "models/weapons/csgo/c_eq_strela.mdl"
 SWEP.WorldModelOffset = {
-    Pos = Vector(-11, 6, -2.5),
-    Ang = Angle(-17, 3, 180),
-    TPIKPos = Vector(-15, 5, 0),
+    Pos = Vector(-9, 8, -4),
+    Ang = Angle(-17, 3, 190),
+    TPIKPos = Vector(-4, 6, 0),
     TPIKAng = Angle(0, 0, 180),
     Scale = 1
 }
@@ -182,7 +182,7 @@ SWEP.CrouchPos = Vector(-0.5, -0, -1)
 SWEP.CrouchAng = Angle(0, -8, -5)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(5, 40, 5)
+SWEP.CustomizePos = Vector(2, 30, 4)
 SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeNoRotate = false
 SWEP.CustomizeSnapshotPos = Vector(-5, 25, 3)
@@ -223,8 +223,8 @@ SWEP.DryFireSound = "weapons/csgo/svd/svd_empty.ogg"
 
 SWEP.FiremodeSound = "CSGO.Rifle.Switch_Mode"
 
-SWEP.EnterSightsSound = "weapons/csgo/pila/weap_la_kgolf_ads_up.ogg"
-SWEP.ExitSightsSound = "weapons/csgo/pila/weap_la_kgolf_ads_down.ogg"
+SWEP.EnterSightsSound = "weapons/csgo/strela/weap_la_kgolf_ads_up.ogg"
+SWEP.ExitSightsSound = "weapons/csgo/strela/weap_la_kgolf_ads_down.ogg"
 
 SWEP.HookP_BlockFire = function(self)
     return self:GetSightAmount() < 1
@@ -233,6 +233,9 @@ end
 SWEP.Animations = {
     ["fire"] = {
         Source = "shoot1",
+    },
+    ["fire_sights"] = {
+        Source = "shoot1_ads",
     },
     ["reload"] = {
         Source = "reload",
@@ -381,8 +384,8 @@ SWEP.Attachments = {
     {
         PrintName = "Optics",
         Bone = "tag_launcher_attachments",
-        Pos = Vector(1, -3.1, 0.75),
-        Ang = Angle(0, 0, -70),
+        Pos = Vector(5, -3.1, 1.9),
+        Ang = Angle(0, 0, -90),
         Category = {"csgo_optic","csgo_optic_strela"},
         InstalledElements = {"sights"},
 		Installed = "csgo_optic_scope_strela",
@@ -394,8 +397,8 @@ SWEP.Attachments = {
         DefaultAttName = "Default",
         Category = "grip",
         Bone = "tag_launcher_attachments",
-        Pos = Vector(12.6, 0, -1.15),
-        Ang = Angle(0, 0, 180),
+        Pos = Vector(10, -0.83, -1.12),
+        Ang = Angle(0, 0, 200),
 		Scale = 1,
     },
     {

@@ -19,10 +19,10 @@ sound.Add( {
     pitch = {90,110},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
-        "weapons/csgo/pila/weap_kgolf_fire_plr_01.ogg",
-		"weapons/csgo/pila/weap_kgolf_fire_plr_02.ogg",
-		"weapons/csgo/pila/weap_kgolf_fire_plr_03.ogg",
-		"weapons/csgo/pila/weap_kgolf_fire_plr_04.ogg",
+        "weapons/csgo/strela/weap_kgolf_fire_plr_01.ogg",
+		"weapons/csgo/strela/weap_kgolf_fire_plr_02.ogg",
+		"weapons/csgo/strela/weap_kgolf_fire_plr_03.ogg",
+		"weapons/csgo/strela/weap_kgolf_fire_plr_04.ogg",
     }
 } )
 
