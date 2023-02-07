@@ -114,7 +114,7 @@ SWEP.RecoilAutoControl = 1 -- Multiplier for automatic recoil control.
 SWEP.RecoilKick = 1
 
 SWEP.RecoilMultCrouch = 0.7
-SWEP.RecoilMultHipFire = 1.25
+SWEP.RecoilMultMove = 1.25
 SWEP.RecoilMultMove = 1.5
 SWEP.RecoilAutoControlMultHipFire = 0.5
 

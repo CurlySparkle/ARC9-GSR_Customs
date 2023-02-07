@@ -48,8 +48,8 @@ SWEP.Penetration = 0 -- Units of wood that can be penetrated by this gun.
 
 SWEP.ImpactForce = 15
 
-SWEP.ShootEnt = "arc9_gsr_proj_rpg_default2" -- Set to an entity to launch it out of this weapon.
-SWEP.ShootEntForce = 4000
+SWEP.ShootEnt = "arc9_gsr_proj_rpg_default" -- Set to an entity to launch it out of this weapon.
+SWEP.ShootEntForce = 5000
 SWEP.ShootEntityData = {} -- Extra data that can be given to a projectile. Sets SENT.WeaponDataLink with this table.
 
 --SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
@@ -220,7 +220,12 @@ local path = "weapons/csgo/rpg/"
 
 SWEP.ShootSound = "CSGO.RPG.Fire"
 SWEP.DistantShootSound = "CSGO.Nova.Fire.Distance"
-SWEP.DryFireSound = "weapons/clipempty_rifle.wav"
+SWEP.DryFireSound = "weapons/csgo/svd/svd_empty.ogg"
+
+SWEP.FiremodeSound = "CSGO.Rifle.Switch_Mode"
+
+SWEP.EnterSightsSound = "weapons/csgo/rpg/wfoly_la_rpapa7_ads_up.ogg"
+SWEP.ExitSightsSound = "weapons/csgo/rpg/wfoly_la_rpapa7_ads_down.ogg"
 
 SWEP.Animations = {
     ["fire"] = {
