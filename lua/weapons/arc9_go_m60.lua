@@ -123,6 +123,7 @@ SWEP.RecoilPatternDrift = 30
 SWEP.Spread = 0.0002
 
 SWEP.SpreadAddShooting = 0.015 -- Applied per unit of recoil.
+SWEP.RecoilModifierCap = 20
 
 SWEP.SpreadAddMove = 0.09
 SWEP.SpreadAddMidAir = 0.025

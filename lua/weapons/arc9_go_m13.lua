@@ -122,6 +122,7 @@ SWEP.VisualRecoilPunch = 0.5
 SWEP.Spread = 0.002
 
 SWEP.SpreadAddShooting = 0.03 -- Applied per unit of recoil.
+SWEP.RecoilModifierCap = 20
 
 SWEP.SpreadAddMove = 0.1
 SWEP.SpreadAddMidAir = 0.1
@@ -133,7 +134,7 @@ SWEP.SpreadAddSights = -0.5
 -------------------------- HANDLING
 
 SWEP.AimDownSightsTime = 0.3 -- How long it takes to go from hip fire to aiming down sights.
-SWEP.SprintToFireTime = 0.3 -- How long it takes to go from sprinting to being able to fire.
+SWEP.SprintToFireTime = 0.5 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.InstantSprintIdle = false
 
@@ -152,7 +153,7 @@ SWEP.TracerColor = Color(255, 255, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.17, -4, 0.45),
+    Pos = Vector(-2.75, -4, 0.65),
     Ang = Angle(0, 0, 0.5),
     Magnification = 1.15,
     ViewModelFOV = 56,
@@ -177,7 +178,7 @@ SWEP.MovingMidPoint = {
     Ang = Angle(0, 0, 0)
 }
 
-SWEP.MovingPos = Vector(0, -0.7, -0.7)
+SWEP.MovingPos = Vector(0, -0.5, -0.5)
 SWEP.MovingAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-0.5, -0, -1)

@@ -32,7 +32,7 @@ ENT.BoostTime = 0
 ENT.GunshipWorkaround = true
 ENT.HelicopterWorkaround = true
 
-ENT.Damage = 150
+ENT.Damage = 275
 ENT.Radius = 300
 ENT.ImpactDamage = nil
 
@@ -74,10 +74,36 @@ if SERVER then
         self:SetCollisionGroup(COLLISION_GROUP_PROJECTILE)
 
         self.SpawnTime = CurTime()
+		
+      -- if CLIENT then
+            -- if self.Ticks % 5 == 0 then
+            -- local emitter = ParticleEmitter(self:GetPos())
 
-        if self.SmokeTrail then
-            util.SpriteTrail(self, 0, Color(0, 0, 0, 255), false, self.SmokeTrailSize, 0, self.SmokeTrailTime, 1 / self.SmokeTrailSize * 0.5, "particle/particle_smokegrenade")
-        end
+            -- if !self:IsValid() or self:WaterLevel() > 2 then return end
+            -- if !IsValid(emitter) then return end
+
+            -- local smoke = emitter:Add("particle/particle_smokegrenade", self:GetPos())
+            -- smoke:SetVelocity( VectorRand() * 25 )
+            -- smoke:SetGravity( Vector(math.Rand(-5, 5), math.Rand(-5, 5), math.Rand(-20, -25)) )
+            -- smoke:SetDieTime( math.Rand(1.5, 2.0) )
+            -- smoke:SetStartAlpha( 255 )
+            -- smoke:SetEndAlpha( 0 )
+            -- smoke:SetStartSize( 0 )
+            -- smoke:SetEndSize( 100 )
+            -- smoke:SetRoll( math.Rand(-180, 180) )
+            -- smoke:SetRollDelta( math.Rand(-0.2,0.2) )
+            -- smoke:SetColor( 20, 20, 20 )
+            -- smoke:SetAirResistance( 5 )
+            -- smoke:SetPos( self:GetPos() )
+            -- smoke:SetLighting( false )
+            -- emitter:Finish()
+        -- end
+        -- self.Ticks = self.Ticks + 1
+     -- end
+
+        -- if self.SmokeTrail then
+            -- util.SpriteTrail(self, 0, Color(0, 0, 0, 255), false, self.SmokeTrailSize, 0, self.SmokeTrailTime, 1 / self.SmokeTrailSize * 0.5, "particle/particle_smokegrenade")
+        -- end
     end
 
     function ENT:Think()
@@ -199,30 +225,6 @@ if SERVER then
                 self:Detonate()
             end
         end
-		
-        -- if self.Ticks % 5 == 0 then
-            -- local emitter = ParticleEmitter(self:GetPos())
-
-            -- if !self:IsValid() or self:WaterLevel() > 2 then return end
-            -- if !IsValid(emitter) then return end
-
-            -- local smoke = emitter:Add("particle/particle_smokegrenade", self:GetPos())
-            -- smoke:SetVelocity( VectorRand() * 25 )
-            -- smoke:SetGravity( Vector(math.Rand(-5, 5), math.Rand(-5, 5), math.Rand(-20, -25)) )
-            -- smoke:SetDieTime( math.Rand(1.5, 2.0) )
-            -- smoke:SetStartAlpha( 255 )
-            -- smoke:SetEndAlpha( 0 )
-            -- smoke:SetStartSize( 0 )
-            -- smoke:SetEndSize( 100 )
-            -- smoke:SetRoll( math.Rand(-180, 180) )
-            -- smoke:SetRollDelta( math.Rand(-0.2,0.2) )
-            -- smoke:SetColor( 20, 20, 20 )
-            -- smoke:SetAirResistance( 5 )
-            -- smoke:SetPos( self:GetPos() )
-            -- smoke:SetLighting( false )
-            -- emitter:Finish()
-        -- end
-        -- self.Ticks = self.Ticks + 1
     end
 
     function ENT:Detonate()
@@ -241,7 +243,7 @@ if SERVER then
         util.Effect( "Explosion", effectdata)
             --self:EmitSound("phx/kaboom.wav", 125, 100, 1, CHAN_AUTO)
         end
-
+        self:EmitSound("weapons/rpg/shotdown.wav", 80, math.random(90, 110))
         util.BlastDamage(self, IsValid(self:GetOwner()) and self:GetOwner() or self, self:GetPos(), self.Radius, self.DamageOverride or self.Damage)
 
         if SERVER then
@@ -340,7 +342,7 @@ function ENT:Defuse()
 	
     local phys = self:GetPhysicsObject()
     if phys:IsValid() then
-        phys:EnableGravity(true)
+       phys:EnableGravity(true)
     end
 end
 

@@ -2,7 +2,7 @@ local ATT = {}
 
 ATT.PrintName = "Default Scope"
 ATT.CompactName = [[Default]]
-ATT.Icon = Material("entities/attachs/go_optic_schmidt.png", "mips smooth")
+ATT.Icon = Material("entities/attachs/go_optic_pila.png", "mips smooth")
 ATT.Description = [[Long-range combat scope. Provides an improved precision at longer ranges.]]
 ATT.Pros = {
     "+ 8x Zoom",
@@ -19,7 +19,7 @@ ATT.ActivateElements = {"sights_scope"}
 
 ATT.Model = "models/weapons/csgo/attachs/scope/scope_pila.mdl"
 ATT.Scale = 1
-ATT.ModelOffset = Vector(-0.5, 3.15, 0.35)
+ATT.ModelOffset = Vector(-0.3, 3.15, 0.35)
 ATT.ModelAngleOffset = Angle(0, 0, 90)
 
 ATT.Sights = {

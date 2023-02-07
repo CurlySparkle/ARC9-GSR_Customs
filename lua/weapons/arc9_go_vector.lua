@@ -122,6 +122,7 @@ SWEP.VisualRecoilPunch = 0.5
 SWEP.Spread = 0.002
 
 SWEP.SpreadAddShooting = 0.03 -- Applied per unit of recoil.
+SWEP.RecoilModifierCap = 20
 
 SWEP.SpreadAddMove = 0.1
 SWEP.SpreadAddMidAir = 0.1
@@ -490,7 +491,7 @@ SWEP.Attachments = {
         Bone = "tag_attachments",
         Pos = Vector(9.3, 0.9, -1.57),
         Ang = Angle(0, 0, -90),
-		Scale = 0.9
+		Scale = 1
     },
     {
         PrintName = "Grips",

@@ -93,7 +93,7 @@ SWEP.Firemodes = {
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 1.5
+SWEP.Recoil = 1.3
 
 SWEP.RecoilSeed = 6589132
 
@@ -124,7 +124,7 @@ SWEP.RecoilMultSights = 0.9
 -------------------------- VISUAL RECOIL
 
 SWEP.UseVisualRecoil = true
-SWEP.VisualRecoilPunch = 0.8
+SWEP.VisualRecoilPunch = 0.5
 SWEP.VisualRecoilUp = 1
 
 -------------------------- SPREAD
@@ -132,6 +132,8 @@ SWEP.VisualRecoilUp = 1
 SWEP.Spread = 0.002
 
 SWEP.SpreadAddShooting = 0.02 -- Applied per unit of recoil.
+
+SWEP.RecoilModifierCap = 20
 
 SWEP.SpreadAddMove = 0.1
 SWEP.SpreadAddMidAir = 0.1
@@ -162,7 +164,7 @@ SWEP.TracerColor = Color(255, 255, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.95, -4, 0.7),
+    Pos = Vector(-2.45, -3, 0.7),
     Ang = Angle(0, 0, 2.5),
     Magnification = 1.15,
     ViewModelFOV = 56,
@@ -187,7 +189,7 @@ SWEP.MovingMidPoint = {
     Ang = Angle(0, 0, 0)
 }
 
-SWEP.MovingPos = Vector(0, -0.7, -0.7)
+SWEP.MovingPos = Vector(0, -0.5, -0.5)
 SWEP.MovingAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-0.5, -0, -1)

@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - GS:R: Customs"
 SWEP.SubCategory = "Specials"
 
-SWEP.PrintName = "PILA"
+SWEP.PrintName = "Strela-P"
 
 SWEP.Class = "Rocket Launcher"
 
@@ -15,9 +15,9 @@ SWEP.Credits = {
     Assets = "Counter-Strike: Global Offensive/Call of Duty®: Modern Warfare"
 }
 
-SWEP.Description = [[Portable infrared surface-to-air missile with a free-fire option. Self propelled missiles have a higher speed, and moderate explosive yield.]]
+SWEP.Description = [[84mm recoilless rifle lobs an explosive projectile at a very high velocity. The unguided armor piercing round has a low explosive yield, but is devastating against vehicles on contact.]]
 
-SWEP.ViewModel = "models/weapons/csgo/c_eq_pila.mdl"
+SWEP.ViewModel = "models/weapons/csgo/c_eq_strela.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"
 SWEP.DefaultBodygroups = "00000000"
 
@@ -25,7 +25,7 @@ SWEP.Slot = 3
 
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
-SWEP.WorldModelMirror = "models/weapons/csgo/c_eq_pila.mdl"
+SWEP.WorldModelMirror = "models/weapons/csgo/c_eq_strela.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-11, 6, -2.5),
     Ang = Angle(-17, 3, 180),
@@ -48,7 +48,7 @@ SWEP.Penetration = 0 -- Units of wood that can be penetrated by this gun.
 
 SWEP.ImpactForce = 15
 
-SWEP.ShootEnt = "arc9_gsr_proj_pila_default" -- Set to an entity to launch it out of this weapon.
+SWEP.ShootEnt = "arc9_gsr_proj_strela_default" -- Set to an entity to launch it out of this weapon.
 SWEP.ShootEntForce = 4000
 SWEP.ShootEntityData = {} -- Extra data that can be given to a projectile. Sets SENT.WeaponDataLink with this table.
 
@@ -173,13 +173,13 @@ SWEP.MovingMidPoint = {
 }
 
 SWEP.ActivePos = Vector(0, 0, 0)
-SWEP.ActiveAng = Angle(0, -6, 0)
+SWEP.ActiveAng = Angle(0, -8, 0)
 
 SWEP.MovingPos = Vector(0, -0.4, -0.4)
-SWEP.MovingAng = Angle(0, -6, 0)
+SWEP.MovingAng = Angle(0, -8, 0)
 
 SWEP.CrouchPos = Vector(-0.5, -0, -1)
-SWEP.CrouchAng = Angle(0, -6, -5)
+SWEP.CrouchAng = Angle(0, -8, -5)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizePos = Vector(5, 40, 5)
@@ -215,50 +215,24 @@ SWEP.NoShellEject = true
 
 -------------------------- SOUNDS
 
-local path = "weapons/csgo/pila/"
+local path = "weapons/csgo/strela/"
 
-SWEP.ShootSound = "CSGO.Pila.Fire"
+SWEP.ShootSound = "CSGO.Strela.Fire"
 SWEP.DistantShootSound = "CSGO.Nova.Fire.Distance"
 SWEP.DryFireSound = "weapons/csgo/svd/svd_empty.ogg"
 
 SWEP.FiremodeSound = "CSGO.Rifle.Switch_Mode"
 
-SWEP.EnterSightsSound = "weapons/csgo/pila/weap_la_gromeo_ads_up.ogg"
-SWEP.ExitSightsSound = "weapons/csgo/pila/weap_la_gromeo_ads_down.ogg"
+SWEP.EnterSightsSound = "weapons/csgo/pila/weap_la_kgolf_ads_up.ogg"
+SWEP.ExitSightsSound = "weapons/csgo/pila/weap_la_kgolf_ads_down.ogg"
 
 SWEP.HookP_BlockFire = function(self)
     return self:GetSightAmount() < 1
 end
 
-SWEP.LockOn = false
-SWEP.LockOnSights = true
-
--- Use LockOnSights = true to lock only in sights
--- LockOn will provide targeting data in ENT.ShootEntData
-
-SWEP.LockOnAutoaim = true -- Gun will shoot directly towards lockon target
-
-SWEP.LocksLiving = true -- Locks on to any NPC or player
-SWEP.LocksGround = true -- Will lock on to any entity deemed a ground target and not an air target
-SWEP.LocksAir = true -- Will lock on to any entity deemed an air target, and not a ground target
-
-SWEP.LockOnRange = 100000 -- How far away the lockon can be
-SWEP.LockOnFOV = 10 -- How wide the lockon can be
-SWEP.LockedOnFOV = 20 -- FOV needed to maintain a lock
-
-SWEP.LockOnTime = 0.5 -- How long it takes to lock on, in seconds
-
-SWEP.LockOnSound = "weapons/csgo/pila/lockon_start.wav" -- Sound to play when locking on
-SWEP.LockedOnSound = "weapons/csgo/pila/lockon.wav" -- Sound to play when successfully locked target
-
-SWEP.LockOnHUD = true -- Show a box around locked targets
-
 SWEP.Animations = {
     ["fire"] = {
         Source = "shoot1",
-    },
-    ["fire_sights"] = {
-        Source = "shoot1_ads",
     },
     ["reload"] = {
         Source = "reload",
@@ -287,14 +261,12 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_plr_la_gromeo_reload_start.ogg", t = 0 / 30},
-			{s = path .. "wfoly_plr_la_gromeo_reload_rotate.ogg", t = 22 / 30},
-			{s = path .. "wfoly_plr_la_gromeo_reload_rockettip_01.ogg", t = 37 / 30},
-			{s = path .. "wfoly_plr_la_gromeo_reload_grabrocket.ogg", t = 64 / 30},
-			{s = path .. "wfoly_plr_la_gromeo_reload_load_01.ogg", t = 84 / 30},
-			{s = path .. "wfoly_plr_la_gromeo_reload_flipup.ogg", t = 102 / 30},
-			{s = path .. "wfoly_plr_la_gromeo_reload_arm.ogg", t = 128 / 30},
-			{s = path .. "wfoly_plr_la_gromeo_reload_end.ogg", t = 152 / 30},
+			{s = path .. "wfoly_plr_la_kgolf_reload_start.ogg", t = 0 / 30},
+			{s = path .. "wfoly_plr_la_kgolf_reload_unload_01.ogg", t = 32 / 30},
+			{s = path .. "wfoly_plr_la_kgolf_reload_rotate.ogg", t = 68 / 30},
+			{s = path .. "wfoly_plr_la_kgolf_reload_door_01.ogg", t = 83 / 30},
+			{s = path .. "wfoly_plr_la_kgolf_reload_load_01.ogg", t = 105 / 30},
+			{s = path .. "wfoly_plr_la_kgolf_reload_end.ogg", t = 144 / 30},
         },
     },
     ["ready"] = {
@@ -312,21 +284,21 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_la_gromeo_raise_first_up.ogg", t = 3 / 30},
-			{s = path .. "wfoly_plr_la_gromeo_raise_first_settle.ogg", t = 18 / 30},
+            {s = path .. "wfoly_plr_la_kgolf_raise_first_up.ogg", t = 3 / 30},
+			{s = path .. "wfoly_plr_la_kgolf_raise_first_settle.ogg", t = 20 / 30},
         },
     },
     ["draw"] = {
         Source = "draw_short",
         EventTable = {
-            {s = path .. "wfoly_plr_la_gromeo_raise_up.ogg", t = 7 / 30},
-			{s = path .. "wfoly_plr_la_gromeo_raise_settle.ogg", t = 22 / 30},
+            {s = path .. "wfoly_plr_la_kgolf_raise_up.ogg", t = 7 / 30},
+			{s = path .. "wfoly_plr_la_kgolf_raise_settle.ogg", t = 24 / 30},
         },
     },
     ["holster"] = {
         Source = "holster",
         EventTable = {
-            {s = path .. "wfoly_plr_la_gromeo_raise_up.ogg", t = 0 / 30},
+            {s = path .. "wfoly_plr_la_kgolf_raise_up.ogg", t = 0 / 30},
         },
     },
     ["idle"] = {
@@ -370,10 +342,9 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            { s = path .. "wfoly_la_gromeo_inspect_01.ogg", t = 1 / 30 },
-			{ s = path .. "wfoly_la_gromeo_inspect_02.ogg", t = 36 / 30 },
-			{ s = path .. "wfoly_la_gromeo_inspect_03.ogg", t = 87 / 30 },
-			{ s = path .. "wfoly_la_gromeo_inspect_04.ogg", t = 140 / 30 },
+            { s = path .. "wfoly_la_kgolf_inspect_01.ogg", t = 1 / 30 },
+			{ s = path .. "wfoly_la_kgolf_inspect_02.ogg", t = 88 / 30 },
+			{ s = path .. "wfoly_la_kgolf_inspect_03.ogg", t = 135 / 30 },
         },
     },
     ["bash"] = {
@@ -394,33 +365,17 @@ SWEP.AttachmentTableOverrides = {
 }
 
 SWEP.AttachmentElements = {
-    ["sights_scope"] = {
-        Bodygroups = {
-            {2,0},
-        },
-    },
-
-    ["sights"] = {
-        Bodygroups = {
-            {2,1},
-        },
-    },
-    ["grip_rail"] = {
+    ["grip"] = {
         Bodygroups = {
             {1,1},
         },
     },
-    ["laser_rail"] = {
-        Bodygroups = {
-            {3,1},
-        },
-    },
 }
 
-SWEP.Hook_ModifyBodygroups = function(wep, data)
-    local model = data.model
-    if wep:HasElement("sights_scope") then model:SetBodygroup(2,0) end
-end
+-- SWEP.Hook_ModifyBodygroups = function(wep, data)
+    -- local model = data.model
+    -- if wep:HasElement("sights_scope") then model:SetBodygroup(2,0) end
+-- end
 
 SWEP.Attachments = {
     {
@@ -428,11 +383,20 @@ SWEP.Attachments = {
         Bone = "tag_launcher_attachments",
         Pos = Vector(1, -3.1, 0.75),
         Ang = Angle(0, 0, -70),
-        Category = {"csgo_optic","csgo_optic_pila"},
+        Category = {"csgo_optic","csgo_optic_strela"},
         InstalledElements = {"sights"},
-		Installed = "csgo_optic_scope_pila",
-		Integral = "csgo_optic_scope_pila",
+		Installed = "csgo_optic_scope_strela",
+		Integral = "csgo_optic_scope_strela",
         CorrectiveAng = Angle(-0.4, 0.4, 0),
+    },
+    {
+        PrintName = "Grips",
+        DefaultAttName = "Default",
+        Category = "grip",
+        Bone = "tag_launcher_attachments",
+        Pos = Vector(12.6, 0, -1.15),
+        Ang = Angle(0, 0, 180),
+		Scale = 1,
     },
     {
         PrintName = "Tactical",
@@ -441,7 +405,6 @@ SWEP.Attachments = {
         Bone = "tag_launcher_attachments",
         Pos = Vector(13.5, -0.03, 3.1),
         Ang = Angle(0, 0, 180),
-		InstalledElements = {"laser_rail"},
     },
     {
         PrintName = "Ammo",
