@@ -36,26 +36,11 @@ SWEP.WorldModelOffset = {
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 100 -- Damage done at point blank range
-SWEP.DamageMin = 100 -- Damage done at maximum range
-
-SWEP.DamageRand = 0 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
-
-SWEP.RangeMin = 1000 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 10000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
-
-SWEP.Penetration = 0 -- Units of wood that can be penetrated by this gun.
-
-SWEP.ImpactForce = 15
-
 SWEP.ShootEnt = "arc9_gsr_proj_strela_default" -- Set to an entity to launch it out of this weapon.
-SWEP.ShootEntForce = 4000
-SWEP.ShootEntityData = {} -- Extra data that can be given to a projectile. Sets SENT.WeaponDataLink with this table.
+SWEP.ShootEntForce = 3000
 
---SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
-
-SWEP.ShootPosOffset = Vector(5, 20, -5)
-SWEP.ShootPosOffsetSights = Vector(0, 20, 0)
+SWEP.ShootPosOffset = Vector(5, 30, -5)
+SWEP.ShootPosOffsetSights = Vector(0, 30, 0)
 
 SWEP.PushBackForce = 5
 
@@ -181,11 +166,11 @@ SWEP.MovingAng = Angle(0, -8, 0)
 SWEP.CrouchPos = Vector(-0.5, -0, -1)
 SWEP.CrouchAng = Angle(0, -8, -5)
 
-SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(2, 30, 4)
+SWEP.CustomizeAng = Angle(90, -5, 0)
+SWEP.CustomizePos = Vector(5, 30, 4)
 SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeNoRotate = false
-SWEP.CustomizeSnapshotPos = Vector(-5, 25, 3)
+SWEP.CustomizeSnapshotPos = Vector(-1, 15, 3)
 
 -------------------------- HoldTypes
 
@@ -455,16 +440,16 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Category = "charm",
         Bone = "tag_launcher_attachments",
-        Pos = Vector(15.7, -2.2, -0.1),
+        Pos = Vector(3, -1.7, 0.7),
         Ang = Angle(0, 0, 0),
-		Scale = 2,
+		Scale = 1.5,
     },
     {
         PrintName = "Stats",
         Category = {"killcounter","killcounter2"},
         Bone = "tag_launcher_attachments",
-        Pos = Vector(5, -1.7, 0),
-        Ang = Angle(0, 0, 0),
+        Pos = Vector(2, -1.5, 1.8),
+        Ang = Angle(0, 0, 35),
 		CosmeticOnly = true,
     },
 }

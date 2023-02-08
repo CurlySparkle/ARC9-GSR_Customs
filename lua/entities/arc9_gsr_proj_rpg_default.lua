@@ -21,10 +21,8 @@ ENT.FuseTime = 10
 if SERVER then
 
 function ENT:Initialize()
-    local pb_vert = 1
-    local pb_hor = 1
     self:SetModel(self.Model)
-    self:PhysicsInitBox( Vector(-pb_vert,-pb_hor,-pb_hor), Vector(pb_vert,pb_hor,pb_hor) )
+    self:PhysicsInit(SOLID_VPHYSICS)
 
     local phys = self:GetPhysicsObject()
     if phys:IsValid() then

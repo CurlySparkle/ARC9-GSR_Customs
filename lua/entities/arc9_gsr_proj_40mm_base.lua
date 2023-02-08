@@ -14,6 +14,7 @@ ENT.GrenadeRadius = 0
 ENT.FuseTime = 10
 ENT.DragCoefficient = 1
 ENT.DetonateOnImpact = true
+ENT.Gravity = true
 ENT.Damage = 15
 ENT.Radius = 300
 
@@ -30,16 +31,15 @@ ENT.DebrisSounds = {path1 .. "debris1.wav", path1 .. "debris2.wav", path1 .. "de
 
 if SERVER then
     function ENT:Initialize()
-        local pb_vert = 1
-        local pb_hor = 1
         self:SetModel(self.Model)
-        self:PhysicsInitBox(Vector(-pb_vert, -pb_hor, -pb_hor), Vector(pb_vert, pb_hor, pb_hor))
+        self:PhysicsInit(SOLID_VPHYSICS)
         local phys = self:GetPhysicsObject()
 
         if phys:IsValid() then
             phys:Wake()
             phys:SetDragCoefficient(self.DragCoefficient)
             phys:SetBuoyancyRatio(0.1)
+			phys:EnableGravity(self.Gravity)
         end
 
         self.SpawnTime = CurTime()
@@ -150,6 +150,7 @@ function ENT:Detonate()
     end
 
     self:DoDetonation()
+	self.Defused = true
 
     if self.Scorch then
         util.Decal(self.Scorch, self.GrenadePos, self.GrenadePos + self.GrenadeDir * 4, self)
@@ -177,8 +178,19 @@ function ENT:PhysicsCollide(colData, collider)
         self:EmitSound("weapons/rpg/shotdown.wav", 100, 150)
         self:Remove()
     end
+   self:Defuse()
+   return
 end
 
+function ENT:Defuse()
+    self.Defused = true
+    SafeRemoveEntityDelayed(self, 5)
+	
+    local phys = self:GetPhysicsObject()
+    if phys:IsValid() then
+       phys:EnableGravity(true)
+    end
+end
 
 function ENT:Draw()
     self:DrawModel()
