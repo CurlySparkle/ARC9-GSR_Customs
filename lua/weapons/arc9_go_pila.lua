@@ -243,8 +243,8 @@ SWEP.LocksGround = true -- Will lock on to any entity deemed a ground target and
 SWEP.LocksAir = true -- Will lock on to any entity deemed an air target, and not a ground target
 
 SWEP.LockOnRange = 100000 -- How far away the lockon can be
-SWEP.LockOnFOV = 10 -- How wide the lockon can be
-SWEP.LockedOnFOV = 20 -- FOV needed to maintain a lock
+SWEP.LockOnFOV = 65 -- How wide the lockon can be
+SWEP.LockedOnFOV = 65 -- FOV needed to maintain a lock
 
 SWEP.LockOnTime = 0.5 -- How long it takes to lock on, in seconds
 
@@ -488,11 +488,6 @@ SWEP.Attachments = {
     {
         PrintName = "Stickers",
         StickerModel = "models/weapons/stickers/eq_pila_decal_e.mdl",
-        Category = "stickers",
-    },
-    {
-        PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/eq_pila_decal_f.mdl",
         Category = "stickers",
     },
     {

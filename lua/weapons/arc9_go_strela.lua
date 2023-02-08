@@ -116,13 +116,13 @@ SWEP.VisualRecoilUp = 5
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.001
+SWEP.Spread = 0
 SWEP.SpreadAddShooting = 0.03
 
-SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = 0.01
+SWEP.SpreadMultSights = 0
+SWEP.SpreadAddHipFire = 0
 --SWEP.SpreadAddMove = 0
-SWEP.SpreadAddMidAir = 0.03
+SWEP.SpreadAddMidAir = 0.02
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0
 
 SWEP.RecoilPatternDrift = 20
@@ -406,8 +406,8 @@ SWEP.Attachments = {
         DefaultAttName = "Default",
         Category = "csgo_tac",
         Bone = "tag_launcher_attachments",
-        Pos = Vector(13.5, -0.03, 3.1),
-        Ang = Angle(0, 0, 180),
+        Pos = Vector(10, 2.1, 0.9),
+        Ang = Angle(0, 0, -90),
     },
     {
         PrintName = "Ammo",
@@ -433,32 +433,22 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/eq_pila_decal_a.mdl",
+        StickerModel = "models/weapons/stickers/eq_strela_decal_a.mdl",
         Category = "stickers",
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/eq_pila_decal_b.mdl",
+        StickerModel = "models/weapons/stickers/eq_strela_decal_b.mdl",
         Category = "stickers",
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/eq_pila_decal_c.mdl",
+        StickerModel = "models/weapons/stickers/eq_strela_decal_c.mdl",
         Category = "stickers",
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/eq_pila_decal_d.mdl",
-        Category = "stickers",
-    },
-    {
-        PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/eq_pila_decal_e.mdl",
-        Category = "stickers",
-    },
-    {
-        PrintName = "Stickers",
-        StickerModel = "models/weapons/stickers/eq_pila_decal_f.mdl",
+        StickerModel = "models/weapons/stickers/eq_strela_decal_d.mdl",
         Category = "stickers",
     },
     {

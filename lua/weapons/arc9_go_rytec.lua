@@ -199,7 +199,7 @@ SWEP.CrouchAng = Angle(0.5, 0.7, -5)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizePos = Vector(24, 35, 2)
 SWEP.CustomizeSnapshotFOV = 90
-SWEP.CustomizeSnapshotPos = Vector(-1, 7, 5)
+SWEP.CustomizeSnapshotPos = Vector(0, 25, 5)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 SWEP.CustomizeNoRotate = false
 
@@ -373,14 +373,15 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw_short",
         EventTable = {
-            {s = "ARC9_CSGO_Rifle_Draw", t = 0 / 30},
+            {s = path .. "wfoly_sn_xmike109_first_raise_up.wav", t = 0 / 30},
+			{s = path .. "wfoly_sn_xmike109_first_raise_end.wav", t = 10 / 30},
         },
     },
     ["holster"] = {
         Source = "holster",
 		Mult = 2,
         EventTable = {
-            {s = "CSGO.Item.Movement", t = 0 / 30},
+            {s = path .. "wfoly_sn_xmike109_first_raise_up.wav", t = 0 / 30},
         },
     },
     ["idle"] = {
@@ -391,11 +392,11 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-		Mult = 2,
+		Mult = 1.5,
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-		Mult = 2,
+		Mult = 1.5,
     },
     ["inspect"] = {
         Source = "lookat01",

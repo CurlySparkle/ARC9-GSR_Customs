@@ -309,12 +309,28 @@ sound.Add( {
     pitch = {95,105},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
-        "weapons/csgo/cx9/weap_secho_fire_plr_01.wav",
-		"weapons/csgo/cx9/weap_secho_fire_plr_02.wav",
-		"weapons/csgo/cx9/weap_secho_fire_plr_03.wav",
-		"weapons/csgo/cx9/weap_secho_fire_plr_04.wav",
+        "weapons/csgo/cx9/weap_secho_fire_plr_01.ogg",
+		"weapons/csgo/cx9/weap_secho_fire_plr_02.ogg",
+		"weapons/csgo/cx9/weap_secho_fire_plr_03.ogg",
+		"weapons/csgo/cx9/weap_secho_fire_plr_04.ogg",
     }
 } )
+
+sound.Add( {
+    name = "CSGO.CX9.Silenced_Fire",
+    channel = 10,
+    volume = 1.0,
+    level = 120,
+    pitch = {95,105},
+	soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "weapons/csgo/cx9/weap_secho_fire_silenced_plr_01.ogg",
+		"weapons/csgo/cx9/weap_secho_fire_silenced_plr_02.ogg",
+		"weapons/csgo/cx9/weap_secho_fire_silenced_plr_03.ogg",
+		"weapons/csgo/cx9/weap_secho_fire_silenced_plr_04.ogg",
+    }
+} )
+
 
 sound.Add( {
     name = "CSGO.M13.Fire",

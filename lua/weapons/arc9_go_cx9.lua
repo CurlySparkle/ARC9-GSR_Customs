@@ -244,8 +244,7 @@ SWEP.DropMagazineAng = Angle(0, -90, 0)
 local path = "weapons/csgo/cx9/"
 
 SWEP.ShootSound = "CSGO.CX9.Fire"
-SWEP.FirstShootSoundSilenced = "CSGO.mp7.Silenced_Fire_First" 
-SWEP.ShootSoundSilenced = "CSGO.mp7.Silenced_Fire"
+SWEP.ShootSoundSilenced = "CSGO.CX9.Silenced_Fire"
 SWEP.DistantShootSound = "CSGO.mp7.Fire.Distance"
 SWEP.DryFireSound = "weapons/clipempty_rifle.wav"
 
@@ -290,11 +289,11 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_sm_secho_reload_up.wav", t = 0 / 30},
-            {s = path .. "wfoly_sm_secho_reload_magout.wav", t = 12 / 30},
-			{s = path .. "wfoly_sm_secho_reload_maghit.wav", t = 25 / 30},
-			{s = path .. "wfoly_sm_secho_reload_magin.wav", t = 36 / 30},
-			{s = path .. "wfoly_sm_secho_reload_end.wav", t = 37 / 30},
+            {s = path .. "wfoly_sm_secho_reload_up.ogg", t = 0 / 30},
+            {s = path .. "wfoly_sm_secho_reload_magout.ogg", t = 12 / 30},
+			{s = path .. "wfoly_sm_secho_reload_maghit.ogg", t = 25 / 30},
+			{s = path .. "wfoly_sm_secho_reload_magin.ogg", t = 36 / 30},
+			{s = path .. "wfoly_sm_secho_reload_end.ogg", t = 37 / 30},
         },
     },
     ["reload_empty"] = {
@@ -323,13 +322,13 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_sm_secho_reload_empty_up.wav", t = 0 / 30},
-			{s = path .. "wfoly_sm_secho_reload_empty_magout.wav", t = 13 / 30},
-			{s = path .. "wfoly_sm_secho_reload_empty_mvmnt.wav", t = 33 / 30},
-			{s = path .. "wfoly_sm_secho_reload_empty_maghit.wav", t = 40 / 30},
-			{s = path .. "wfoly_sm_secho_reload_empty_magin.wav", t = 43 / 30},
-			{s = path .. "wfoly_sm_secho_reload_empty_charge.wav", t = 49 / 30},
-			{s = path .. "wfoly_sm_secho_reload_empty_end.wav", t = 55 / 30},
+			{s = path .. "wfoly_sm_secho_reload_empty_up.ogg", t = 0 / 30},
+			{s = path .. "wfoly_sm_secho_reload_empty_magout.ogg", t = 13 / 30},
+			{s = path .. "wfoly_sm_secho_reload_empty_mvmnt.ogg", t = 33 / 30},
+			{s = path .. "wfoly_sm_secho_reload_empty_maghit.ogg", t = 40 / 30},
+			{s = path .. "wfoly_sm_secho_reload_empty_magin.ogg", t = 43 / 30},
+			{s = path .. "wfoly_sm_secho_reload_empty_charge.ogg", t = 49 / 30},
+			{s = path .. "wfoly_sm_secho_reload_empty_end.ogg", t = 55 / 30},
         },
     },
     ["ready"] = {
@@ -357,22 +356,22 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_sm_secho_raise_first_up.wav", t = 0 / 30},
-            {s = path .. "wfoly_sm_secho_raise_first_charge.wav", t = 12 / 30},
-            {s = path .. "wfoly_sm_secho_raise_first_end.wav", t = 20 / 30},
+            {s = path .. "wfoly_sm_secho_raise_first_up.ogg", t = 0 / 30},
+            {s = path .. "wfoly_sm_secho_raise_first_charge.ogg", t = 12 / 30},
+            {s = path .. "wfoly_sm_secho_raise_first_end.ogg", t = 20 / 30},
         },
     },
     ["draw"] = {
         Source = "draw_short",
         EventTable = {
-            {s = path .. "wfoly_sm_secho_raise.wav", t = 0 / 30},
+            {s = path .. "wfoly_sm_secho_raise.ogg", t = 0 / 30},
         },
     },
     ["holster"] = {
         Source = "holster",
 		Mult = 0.7,
         EventTable = {
-            {s = "CSGO.Item.Movement", t = 0 / 30},
+            {s = path .. "wfoly_sm_secho_reload_end.ogg", t = 0 / 30},
         },
     },
     ["idle"] = {
