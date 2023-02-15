@@ -168,19 +168,22 @@ SWEP.SprintMidPoint = {
     Ang = Angle(-2.5, 0, 2.5)
 }
 
-SWEP.ActivePos = Vector(0, 0, 0)
-SWEP.ActiveAng = Angle(0, 0, 0)
-
 SWEP.MovingMidPoint = {
     Pos = Vector(0, -0.5, -0.5),
     Ang = Angle(0, 0, 0)
 }
 
+SWEP.ActivePos = Vector(0, 0, 0)
+SWEP.ActiveAng = Angle(0, -7, 0)
+
+SWEP.ActivePosShooting = Vector(0, 0, 0)
+SWEP.ActiveAngShooting = Angle(0, 0, 0)
+
 SWEP.MovingPos = Vector(0, -0.5, -0.5)
-SWEP.MovingAng = Angle(0, 0, 0)
+SWEP.MovingAng = Angle(0, -7, 0)
 
 SWEP.CrouchPos = Vector(-0.5, -0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchAng = Angle(0, -7, -5)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizePos = Vector(17, 35, 3)

@@ -17,6 +17,7 @@ AddCSLuaFile()
 ENT.Model = "models/weapons/csgo/mags/w_eq_rpg_rocket.mdl"
 ENT.Ticks = 0
 ENT.FuseTime = 10
+ENT.Radius = 300
 
 if SERVER then
 
@@ -112,6 +113,7 @@ function ENT:Detonate()
     end
 
     util.BlastDamage(self, attacker, self:GetPos(), 300, 110)
+	util.ScreenShake(self:GetPos(), 25, 4, 0.75, self.Radius * 4)
 
     self:FireBullets({
         Attacker = attacker,

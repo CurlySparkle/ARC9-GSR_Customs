@@ -157,6 +157,9 @@ SWEP.MovingMidPoint = {
     Ang = Angle(0, 0, 0)
 }
 
+SWEP.ActivePosShooting = Vector(0, 0, 0)
+SWEP.ActiveAngShooting = Angle(0, 0, 0)
+
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, -8, 0)
 
@@ -210,10 +213,6 @@ SWEP.FiremodeSound = "CSGO.Rifle.Switch_Mode"
 
 SWEP.EnterSightsSound = "weapons/csgo/strela/weap_la_kgolf_ads_up.ogg"
 SWEP.ExitSightsSound = "weapons/csgo/strela/weap_la_kgolf_ads_down.ogg"
-
-SWEP.HookP_BlockFire = function(self)
-    return self:GetSightAmount() < 1
-end
 
 SWEP.Animations = {
     ["fire"] = {

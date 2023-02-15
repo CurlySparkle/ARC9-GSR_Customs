@@ -74,7 +74,7 @@ SWEP.Crosshair = true
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 300
+SWEP.RPM = 150
 
 SWEP.Firemodes = {
     {
@@ -245,19 +245,19 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_plr_la_mike32_reload_start.wav", t = 0 / 30},
-			{s = path .. "wfoly_plr_la_mike32_reload_open_01.wav", t = 0 / 30},
-			{s = path .. "wfoly_plr_la_mike32_reload_smack.wav", t = 26 / 30},
-			{s = path .. "wfoly_plr_la_mike32_reload_shellsout_01.wav", t = 27 / 30},
-			{s = path .. "wfoly_plr_la_mike32_reload_grab.wav", t = 34 / 30},
-			{s = path .. "wfoly_plr_la_mike32_reload_rattle.wav", t = 48 / 30},
-			{s = path .. "wfoly_plr_la_mike32_reload_armup.wav", t = 75 / 30},
-			{s = path .. "wfoly_plr_la_mike32_reload_shellsin_01.wav", t = 76 / 30},
-			{s = path .. "wfoly_plr_la_mike32_reload_cylinder_01.wav", t = 93 / 30},
-			{s = path .. "wfoly_plr_la_mike32_reload_armdown.wav", t = 121 / 30},
-			{s = path .. "wfoly_plr_la_mike32_reload_grab2.wav", t = 134 / 30},
-			{s = path .. "wfoly_plr_la_mike32_reload_close_01.wav", t = 146 / 30},
-			{s = path .. "wfoly_plr_la_mike32_reload_end.wav", t = 149 / 30},
+			{s = path .. "wfoly_plr_la_mike32_reload_start.ogg", t = 0 / 30},
+			{s = path .. "wfoly_plr_la_mike32_reload_open_01.ogg", t = 0 / 30},
+			{s = path .. "wfoly_plr_la_mike32_reload_smack.ogg", t = 26 / 30},
+			{s = path .. "wfoly_plr_la_mike32_reload_shellsout_01.ogg", t = 27 / 30},
+			{s = path .. "wfoly_plr_la_mike32_reload_grab.ogg", t = 34 / 30},
+			{s = path .. "wfoly_plr_la_mike32_reload_rattle.ogg", t = 48 / 30},
+			{s = path .. "wfoly_plr_la_mike32_reload_armup.ogg", t = 75 / 30},
+			{s = path .. "wfoly_plr_la_mike32_reload_shellsin_01.ogg", t = 76 / 30},
+			{s = path .. "wfoly_plr_la_mike32_reload_cylinder_01.ogg", t = 93 / 30},
+			{s = path .. "wfoly_plr_la_mike32_reload_armdown.ogg", t = 121 / 30},
+			{s = path .. "wfoly_plr_la_mike32_reload_grab2.ogg", t = 134 / 30},
+			{s = path .. "wfoly_plr_la_mike32_reload_close_01.ogg", t = 146 / 30},
+			{s = path .. "wfoly_plr_la_mike32_reload_end.ogg", t = 149 / 30},
         },
     },
     ["ready"] = {
@@ -275,22 +275,22 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_la_mike32_raise_first_up.wav", t = 0 / 30},
-			{s = path .. "wfoly_plr_la_mike32_raise_first_close_01.wav", t = 11 / 30},
-			{s = path .. "wfoly_plr_la_mike32_raise_first_settle.wav", t = 26 / 30},
+            {s = path .. "wfoly_plr_la_mike32_raise_first_up.ogg", t = 0 / 30},
+			{s = path .. "wfoly_plr_la_mike32_raise_first_close_01.ogg", t = 11 / 30},
+			{s = path .. "wfoly_plr_la_mike32_raise_first_settle.ogg", t = 26 / 30},
         },
     },
     ["draw"] = {
         Source = "draw_short",
         EventTable = {
-            {s = path .. "wfoly_plr_la_mike32_raise_up.wav", t = 0 / 30},
-			{s = path .. "wfoly_plr_la_mike32_raise_settle.wav", t = 15 / 30},
+            {s = path .. "wfoly_plr_la_mike32_raise_up.ogg", t = 0 / 30},
+			{s = path .. "wfoly_plr_la_mike32_raise_settle.ogg", t = 15 / 30},
         },
     },
     ["holster"] = {
         Source = "holster",
         EventTable = {
-            {s = path .. "wfoly_plr_la_mike32_raise_up.wav", t = 0 / 30},
+            {s = path .. "wfoly_plr_la_mike32_raise_up.ogg", t = 0 / 30},
         },
     },
     ["idle"] = {

@@ -1,13 +1,26 @@
 sound.Add( {
+    name = "CSGO.M32.Explode",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 140,
+    sound = {
+        "^weapons/csgo/m32/rocket_expl_01.ogg",
+		"^weapons/csgo/m32/rocket_expl_02.ogg",
+		"^weapons/csgo/m32/rocket_expl_03.ogg",
+		"^weapons/csgo/m32/rocket_expl_04.ogg",
+    }
+} )
+
+sound.Add( {
     name = "CSGO.Strela.Explode",
     channel = CHAN_STATIC,
     volume = 1.0,
     level = 140,
     sound = {
-        "^weapons/csgo/strela/rocket_expl_01.wav",
-		"^weapons/csgo/strela/rocket_expl_02.wav",
-		"^weapons/csgo/strela/rocket_expl_03.wav",
-		"^weapons/csgo/strela/rocket_expl_04.wav",
+        "^weapons/csgo/strela/rocket_expl_01.ogg",
+		"^weapons/csgo/strela/rocket_expl_02.ogg",
+		"^weapons/csgo/strela/rocket_expl_03.ogg",
+		"^weapons/csgo/strela/rocket_expl_04.ogg",
     }
 } )
 
@@ -400,10 +413,10 @@ sound.Add( {
     pitch = {95,105},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
-        "weapons/csgo/m32/weap_mike32_fire_plr_01.wav",
-		"weapons/csgo/m32/weap_mike32_fire_plr_02.wav",
-		"weapons/csgo/m32/weap_mike32_fire_plr_03.wav",
-		"weapons/csgo/m32/weap_mike32_fire_plr_04.wav",
+        "weapons/csgo/m32/weap_mike32_fire_plr_01.ogg",
+		"weapons/csgo/m32/weap_mike32_fire_plr_02.ogg",
+		"weapons/csgo/m32/weap_mike32_fire_plr_03.ogg",
+		"weapons/csgo/m32/weap_mike32_fire_plr_04.ogg",
     }
 } )
 
