@@ -9,6 +9,14 @@ SWEP.SubCategory = "Sniper Rifles"
 SWEP.PrintName = "SG-550"
 
 SWEP.Class = "Sniper Rifle"
+SWEP.Trivia = {
+    ["Country of Origin"] = "Switzerland",
+    ["Caliber"] = "7.62×39mm",
+    ["Weight (Loaded)"] = "4.1 kg",
+    ["Projectile Weight"] = "154 gr",
+    ["Muzzle Velocity"] = "2,989 ft/s",
+    ["Muzzle Energy"] = "4,143 joules"
+}
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/SlogoKolt/Arctic/TheOnly8Z/Matsilagi/CturiX",

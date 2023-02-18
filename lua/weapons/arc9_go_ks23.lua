@@ -7,17 +7,16 @@ SWEP.Category = "ARC9 - GS:R: Customs"
 SWEP.SubCategory = "Shotguns"
 
 SWEP.PrintName = "KS-23"
-SWEP.TrueName = "KS-23"
 
 SWEP.Class = "Shotgun"
--- SWEP.Trivia = {
-    -- ["Country of Origin"] = "United States of America",
-    -- ["Caliber"] = "12×70 Shotshell",
-    -- ["Weight (Loaded)"] = "3.22kg",
-    -- ["Projectile Weight"] = "4 Grams",
-    -- ["Muzzle Velocity"] = "2900 Feet/Second",
-    -- ["Muzzle Energy"] = "1570 Joules"
--- }
+SWEP.Trivia = {
+    ["Country of Origin"] = "Soviet Union",
+    ["Caliber"] = "12 gauge",
+    ["Weight (Loaded)"] = "1,2 kg",
+    ["Projectile Weight"] = "493 gr",
+    ["Muzzle Velocity"] = "1,250 ft/s",
+    ["Muzzle Energy"] = "2,319 joules"
+}
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/Dblazincic11",

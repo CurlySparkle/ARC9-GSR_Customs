@@ -11,11 +11,11 @@ SWEP.PrintName = "Dragunov"
 SWEP.Class = "Sniper Rifle"
 SWEP.Trivia = {
     ["Country of Origin"] = "Switzerland",
-    ["Caliber"] = "7.62x51mm",
-    ["Weight (Loaded)"] = "3.22kg",
-    ["Projectile Weight"] = "4 Grams",
-    ["Muzzle Velocity"] = "2,989 Feet/Second",
-    ["Muzzle Energy"] = "1570 Joules"
+    ["Caliber"] = "7.62×54mmR",
+    ["Weight (Loaded)"] = "4.4 kg",
+    ["Projectile Weight"] = "144 gr",
+    ["Muzzle Velocity"] = "2,723 ft/s",
+    ["Muzzle Energy"] = "3,215 joules"
 }
 
 SWEP.Credits = {

@@ -9,14 +9,14 @@ SWEP.SubCategory = "Assault Rifles"
 SWEP.PrintName = "VHS-2"
 
 SWEP.Class = "Assault Rifle"
--- SWEP.Trivia = {
-    -- ["Country of Origin"] = "France",
-    -- ["Caliber"] = "5.56x45mm NATO",
-    -- ["Weight (Loaded)"] = "3.40kg",
-    -- ["Projectile Weight"] = "4 Grams",
-    -- ["Muzzle Velocity"] = "2212 Feet/Second",
-    -- ["Muzzle Energy"] = "1712 Joules"
--- }
+SWEP.Trivia = {
+    ["Country of Origin"] = "Croatia",
+    ["Caliber"] = "5.56×45mm NATO",
+    ["Weight (Loaded)"] = "3.3 kg",
+    ["Projectile Weight"] = "62 gr",
+    ["Muzzle Velocity"] = "3,080 ft/s",
+    ["Muzzle Energy"] = "1,771 joules"
+}
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/SlogoKolt/Arctic/TheOnly8Z/Matsilagi/CturiX",

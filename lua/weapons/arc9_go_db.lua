@@ -7,17 +7,16 @@ SWEP.Category = "ARC9 - GS:R: Customs"
 SWEP.SubCategory = "Shotguns"
 
 SWEP.PrintName = "Double Barrel"
-SWEP.TrueName = "Double Barrel"
 
 SWEP.Class = "Shotgun"
--- SWEP.Trivia = {
-    -- ["Country of Origin"] = "United States of America",
-    -- ["Caliber"] = "5.56 NATO",
-    -- ["Weight (Loaded)"] = "3.22kg",
-    -- ["Projectile Weight"] = "4 Grams",
-    -- ["Muzzle Velocity"] = "2900 Feet/Second",
-    -- ["Muzzle Energy"] = "1570 Joules"
--- }
+SWEP.Trivia = {
+    ["Country of Origin"] = "United States",
+    ["Caliber"] = "12 gauge",
+    ["Weight (Loaded)"] = "1 kg",
+    ["Projectile Weight"] = "493 gr",
+    ["Muzzle Velocity"] = "1,100 ft/s",
+    ["Muzzle Energy"] = "1,796 joules"
+}
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/okkJFJ/SlogoKolt/Arctic/TheOnly8Z/Matsilagi/CturiX",

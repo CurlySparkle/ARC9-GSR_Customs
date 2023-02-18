@@ -7,17 +7,16 @@ SWEP.Category = "ARC9 - GS:R: Customs"
 SWEP.SubCategory = "Submachine Guns"
 
 SWEP.PrintName = "G-21 C"
-SWEP.TrueName = "G-21 C"
 
 SWEP.Class = "Submachine Gun"
--- SWEP.Trivia = {
-    -- ["Country of Origin"] = "United States of America",
-    -- ["Caliber"] = "7.62x51mm NATO",
-    -- ["Weight (Loaded)"] = "3.22kg",
-    -- ["Projectile Weight"] = "4 Grams",
-    -- ["Muzzle Velocity"] = "810 m/s",
-    -- ["Muzzle Energy"] = "1570 Joules"
--- }
+SWEP.Trivia = {
+    ["Country of Origin"] = "United States",
+    ["Caliber"] = "5.56×45mm NATO",
+    ["Weight (Loaded)"] = "300 g",
+    ["Projectile Weight"] = "63 gr",
+    ["Muzzle Velocity"] = "2,790 ft/s",
+    ["Muzzle Energy"] = "1,477 joules"
+}
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/Teh Snake/IIopn/Ghost597879",

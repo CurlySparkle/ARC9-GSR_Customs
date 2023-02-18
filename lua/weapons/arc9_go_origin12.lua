@@ -9,6 +9,15 @@ SWEP.SubCategory = "Shotguns"
 SWEP.PrintName = "Origin-12"
 
 SWEP.Class = "Shotgun"
+SWEP.Trivia = {
+    ["Country of Origin"] = "United States",
+    ["Manufacturer"] = "FORGE TAC",
+    ["Caliber"] = "12 gauge",
+    ["Weight (Loaded)"] = "4.2 kg",
+    ["Projectile Weight"] = "493 gr",
+    ["Muzzle Velocity"] = "1,250 ft/s",
+    ["Muzzle Energy"] = "2,319 joules"
+}
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/SlogoKolt/Arctic/TheOnly8Z/Matsilagi/CturiX",

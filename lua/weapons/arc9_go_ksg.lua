@@ -10,14 +10,14 @@ SWEP.PrintName = "KSG"
 SWEP.TrueName = "Kel-Tec KSG"
 
 SWEP.Class = "Shotgun"
--- SWEP.Trivia = {
-    -- ["Country of Origin"] = "United States of America",
-    -- ["Caliber"] = "12×70 Shotshell",
-    -- ["Weight (Loaded)"] = "3.22kg",
-    -- ["Projectile Weight"] = "4 Grams",
-    -- ["Muzzle Velocity"] = "2900 Feet/Second",
-    -- ["Muzzle Energy"] = "1570 Joules"
--- }
+SWEP.Trivia = {
+    ["Country of Origin"] = "United States",
+    ["Caliber"] = "12 gauge",
+    ["Weight (Loaded)"] = "3.1 kg",
+    ["Projectile Weight"] = "493 gr",
+    ["Muzzle Velocity"] = "1,350 ft/s",
+    ["Muzzle Energy"] = "2,705 joules"
+}
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/Millenia/Dblazincic11/Brain Collector/raynox3d",

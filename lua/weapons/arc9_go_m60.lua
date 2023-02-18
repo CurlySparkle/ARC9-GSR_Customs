@@ -7,17 +7,16 @@ SWEP.Category = "ARC9 - GS:R: Customs"
 SWEP.SubCategory = "LMGs"
 
 SWEP.PrintName = "M60"
-SWEP.TrueName = "M60"
 
-SWEP.Class = "Light Machine Gun"
--- SWEP.Trivia = {
-    -- ["Country of Origin"] = "France",
-    -- ["Caliber"] = "5.56x45mm NATO",
-    -- ["Weight (Loaded)"] = "3.40kg",
-    -- ["Projectile Weight"] = "4 Grams",
-    -- ["Muzzle Velocity"] = "2212 Feet/Second",
-    -- ["Muzzle Energy"] = "1712 Joules"
--- }
+SWEP.Class = "General-Purpose Machine Gun"
+SWEP.Trivia = {
+    ["Country of Origin"] = "United States",
+    ["Caliber"] = "7.62×51mm NATO",
+    ["Weight (Loaded)"] = "4 kg",
+    ["Projectile Weight"] = "147 gr",
+    ["Muzzle Velocity"] = "2,800 ft/s",
+    ["Muzzle Energy"] = "3,470 joules"
+}
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/Defuse/Se7en/Killer699",

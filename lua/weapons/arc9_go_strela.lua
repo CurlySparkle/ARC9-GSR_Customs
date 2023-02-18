@@ -9,6 +9,9 @@ SWEP.SubCategory = "Specials"
 SWEP.PrintName = "Strela-P"
 
 SWEP.Class = "Rocket Launcher"
+SWEP.Trivia = {
+    ["Manufacturer"] = "FORGE TAC",
+}
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/SlogoKolt/Arctic/TheOnly8Z/Matsilagi/CturiX",

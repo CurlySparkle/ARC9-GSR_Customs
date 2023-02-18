@@ -9,6 +9,9 @@ SWEP.SubCategory = "Specials"
 SWEP.PrintName = "PILA"
 
 SWEP.Class = "Rocket Launcher"
+SWEP.Trivia = {
+    ["Manufacturer"] = "FSS",
+}
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/SlogoKolt/Arctic/TheOnly8Z/Matsilagi/CturiX",

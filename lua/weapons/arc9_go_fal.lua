@@ -11,12 +11,12 @@ SWEP.TrueName = "FN-FAL"
 
 SWEP.Class = "Assault Rifle"
 SWEP.Trivia = {
-    ["Country of Origin"] = "United States of America",
-    ["Caliber"] = "7.62x51mm NATO",
-    ["Weight (Loaded)"] = "3.22kg",
-    ["Projectile Weight"] = "4 Grams",
-    ["Muzzle Velocity"] = "810 m/s",
-    ["Muzzle Energy"] = "1570 Joules"
+    ["Country of Origin"] = "Belgium",
+    ["Caliber"] = "7.62×51mm NATO",
+    ["Weight (Loaded)"] = "4.45 kg",
+    ["Projectile Weight"] = "144 gr",
+    ["Muzzle Velocity"] = "2,755.9 ft/s",
+    ["Muzzle Energy"] = "3,293 joules"
 }
 
 SWEP.Credits = {

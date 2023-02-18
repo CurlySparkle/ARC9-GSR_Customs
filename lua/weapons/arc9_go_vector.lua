@@ -9,6 +9,14 @@ SWEP.SubCategory = "Submachine Guns"
 SWEP.PrintName = "Vector"
 
 SWEP.Class = "Submachine Gun"
+SWEP.Trivia = {
+    ["Country of Origin"] = "United States",
+    ["Caliber"] = "9×19mm Parabellum",
+    ["Weight (Loaded)"] = "2.7 kg",
+    ["Projectile Weight"] = "124 gr",
+    ["Muzzle Velocity"] = "1,345 ft/s",
+    ["Muzzle Energy"] = "675 joules"
+}
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/SlogoKolt/Arctic/TheOnly8Z/Matsilagi/CturiX",

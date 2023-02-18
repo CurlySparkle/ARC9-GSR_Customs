@@ -9,6 +9,9 @@ SWEP.SubCategory = "Specials"
 SWEP.PrintName = "Crossbow"
 
 SWEP.Class = "Marksman Rifle"
+SWEP.Trivia = {
+    ["Manufacturer"] = "FSS",
+}
 
 SWEP.Credits = {
     Author = "Twilight Sparkle/SlogoKolt/Arctic/TheOnly8Z/Matsilagi/CturiX",
