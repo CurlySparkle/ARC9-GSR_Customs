@@ -40,7 +40,7 @@ SWEP.WorldModelOffset = {
 -------------------------- DAMAGE PROFILE
 
 SWEP.ShootEnt = "arc9_gsr_proj_strela_default" -- Set to an entity to launch it out of this weapon.
-SWEP.ShootEntForce = 3000
+SWEP.ShootEntForce = 5000
 
 SWEP.ShootPosOffset = Vector(5, 30, -5)
 SWEP.ShootPosOffsetSights = Vector(0, 30, 0)
@@ -105,7 +105,7 @@ SWEP.VisualRecoilUp = 5
 -------------------------- SPREAD
 
 SWEP.Spread = 0
-SWEP.SpreadAddShooting = 0.03
+SWEP.SpreadAddRecoil = 0.03
 
 SWEP.SpreadMultSights = 0
 SWEP.SpreadAddHipFire = 0
